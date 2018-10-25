@@ -1,0 +1,1689 @@
+# github.com/ethereumproject/go-ethereum/vendor/github.com/ethereumproject/sputnikvm-ffi/go/sputnikvm
+/tmp/go-build026156104/b222/_cgo_main.o:/tmp/go-build/cgo-generated-wrappers:5: undefined reference to `CREATE_ACTION'
+/tmp/go-build026156104/b222/_cgo_main.o:/tmp/go-build/cgo-generated-wrappers:2: undefined reference to `CALL_ACTION'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_print_u256':
+/tmp/go-build/cgo-gcc-prolog:49: undefined reference to `print_u256'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_account_changes_copy_code':
+/tmp/go-build/cgo-gcc-prolog:127: undefined reference to `sputnikvm_account_changes_copy_code'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_account_changes_copy_storage':
+/tmp/go-build/cgo-gcc-prolog:165: undefined reference to `sputnikvm_account_changes_copy_storage'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_account_changes_len':
+/tmp/go-build/cgo-gcc-prolog:183: undefined reference to `sputnikvm_account_changes_len'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_commit_account':
+/tmp/go-build/cgo-gcc-prolog:208: undefined reference to `sputnikvm_commit_account'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_commit_account_code':
+/tmp/go-build/cgo-gcc-prolog:231: undefined reference to `sputnikvm_commit_account_code'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_commit_account_storage':
+/tmp/go-build/cgo-gcc-prolog:253: undefined reference to `sputnikvm_commit_account_storage'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_commit_blockhash':
+/tmp/go-build/cgo-gcc-prolog:273: undefined reference to `sputnikvm_commit_blockhash'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_commit_nonexist':
+/tmp/go-build/cgo-gcc-prolog:293: undefined reference to `sputnikvm_commit_nonexist'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_fire':
+/tmp/go-build/cgo-gcc-prolog:310: undefined reference to `sputnikvm_fire'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_logs_len':
+/tmp/go-build/cgo-gcc-prolog:372: undefined reference to `sputnikvm_logs_len'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_logs_topic':
+/tmp/go-build/cgo-gcc-prolog:391: undefined reference to `sputnikvm_logs_topic'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_custom_eip150':
+/tmp/go-build/cgo-gcc-prolog:409: undefined reference to `sputnikvm_new_custom_eip150'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_custom_eip160':
+/tmp/go-build/cgo-gcc-prolog:427: undefined reference to `sputnikvm_new_custom_eip160'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_custom_frontier':
+/tmp/go-build/cgo-gcc-prolog:445: undefined reference to `sputnikvm_new_custom_frontier'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_custom_homestead':
+/tmp/go-build/cgo-gcc-prolog:463: undefined reference to `sputnikvm_new_custom_homestead'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_eip150':
+/tmp/go-build/cgo-gcc-prolog:481: undefined reference to `sputnikvm_new_eip150'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_eip160':
+/tmp/go-build/cgo-gcc-prolog:499: undefined reference to `sputnikvm_new_eip160'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_frontier':
+/tmp/go-build/cgo-gcc-prolog:517: undefined reference to `sputnikvm_new_frontier'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_homestead':
+/tmp/go-build/cgo-gcc-prolog:535: undefined reference to `sputnikvm_new_homestead'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_morden_eip150':
+/tmp/go-build/cgo-gcc-prolog:553: undefined reference to `sputnikvm_new_morden_eip150'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_morden_eip160':
+/tmp/go-build/cgo-gcc-prolog:571: undefined reference to `sputnikvm_new_morden_eip160'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_morden_frontier':
+/tmp/go-build/cgo-gcc-prolog:589: undefined reference to `sputnikvm_new_morden_frontier'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_morden_homestead':
+/tmp/go-build/cgo-gcc-prolog:607: undefined reference to `sputnikvm_new_morden_homestead'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_set_custom_initial_nonce':
+/tmp/go-build/cgo-gcc-prolog:677: undefined reference to `sputnikvm_set_custom_initial_nonce'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_used_gas':
+/tmp/go-build/cgo-gcc-prolog:692: undefined reference to `sputnikvm_used_gas'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_account_changes_copy_info':
+/tmp/go-build/cgo-gcc-prolog:144: undefined reference to `sputnikvm_account_changes_copy_info'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_free':
+/tmp/go-build/cgo-gcc-prolog:324: undefined reference to `sputnikvm_free'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_logs_copy_data':
+/tmp/go-build/cgo-gcc-prolog:341: undefined reference to `sputnikvm_logs_copy_data'
+/tmp/go-build026156104/b222/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_logs_copy_info':
+/tmp/go-build/cgo-gcc-prolog:356: undefined reference to `sputnikvm_logs_copy_info'
+collect2: error: ld returned 1 exit status
+=== RUN   TestWatchNewFile
+=== PAUSE TestWatchNewFile
+=== RUN   TestWatchNoDir
+=== PAUSE TestWatchNoDir
+=== RUN   TestCacheInitialReload
+--- PASS: TestCacheInitialReload (0.00s)
+=== RUN   TestCacheAddDeleteOrder
+--- PASS: TestCacheAddDeleteOrder (0.00s)
+=== RUN   TestCacheFind
+--- PASS: TestCacheFind (0.00s)
+=== RUN   TestAccountCache_WatchRemove
+=== PAUSE TestAccountCache_WatchRemove
+=== RUN   TestCacheFilePath
+--- PASS: TestCacheFilePath (0.00s)
+=== RUN   TestCacheInitialReload_CacheDB
+--- PASS: TestCacheInitialReload_CacheDB (0.53s)
+=== RUN   TestCacheAddDeleteOrder_CacheDB
+--- PASS: TestCacheAddDeleteOrder_CacheDB (1.51s)
+=== RUN   TestCacheFind_CacheFind
+--- PASS: TestCacheFind_CacheFind (1.32s)
+=== RUN   TestAccountCache_CacheDB_SyncFS2DB
+--- PASS: TestAccountCache_CacheDB_SyncFS2DB (0.00s)
+=== RUN   TestCacheDBFilePath
+--- PASS: TestCacheDBFilePath (0.02s)
+=== RUN   TestKeyStore
+--- PASS: TestKeyStore (0.00s)
+=== RUN   TestKeyStoreDecryptionFail
+--- PASS: TestKeyStoreDecryptionFail (0.00s)
+=== RUN   TestImportPreSaleKey
+--- PASS: TestImportPreSaleKey (0.01s)
+=== RUN   TestV3_PBKDF2_1
+=== PAUSE TestV3_PBKDF2_1
+=== RUN   TestV3_PBKDF2_2
+=== PAUSE TestV3_PBKDF2_2
+=== RUN   TestV3_PBKDF2_3
+=== PAUSE TestV3_PBKDF2_3
+=== RUN   TestV3_PBKDF2_4
+=== PAUSE TestV3_PBKDF2_4
+=== RUN   TestV3_Scrypt_1
+=== PAUSE TestV3_Scrypt_1
+=== RUN   TestV3_Scrypt_2
+=== PAUSE TestV3_Scrypt_2
+=== RUN   TestV1_1
+=== PAUSE TestV1_1
+=== RUN   TestV1_2
+=== PAUSE TestV1_2
+=== RUN   TestKeyForDirectICAP
+=== PAUSE TestKeyForDirectICAP
+=== RUN   TestKeyEncryptDecrypt
+--- PASS: TestKeyEncryptDecrypt (0.01s)
+=== RUN   TestManager_Mem
+--- PASS: TestManager_Mem (0.00s)
+=== RUN   TestManager_Accounts_Mem
+--- PASS: TestManager_Accounts_Mem (0.00s)
+=== RUN   TestManager_AccountsByIndex
+--- PASS: TestManager_AccountsByIndex (0.00s)
+=== RUN   TestSignWithPassphrase_Mem
+--- PASS: TestSignWithPassphrase_Mem (0.00s)
+=== RUN   TestTimedUnlock_Mem
+--- PASS: TestTimedUnlock_Mem (0.26s)
+=== RUN   TestTimedUnlock_Mem2
+--- PASS: TestTimedUnlock_Mem2 (0.25s)
+=== RUN   TestOverrideUnlock_Mem
+--- PASS: TestOverrideUnlock_Mem (0.25s)
+=== RUN   TestSignRace_Mem
+--- PASS: TestSignRace_Mem (0.02s)
+=== RUN   TestManager_DB
+--- PASS: TestManager_DB (0.00s)
+=== RUN   TestManager_Accounts_CacheDB
+--- PASS: TestManager_Accounts_CacheDB (0.68s)
+=== RUN   TestManager_AccountsByIndex_CacheDB
+--- PASS: TestManager_AccountsByIndex_CacheDB (0.48s)
+=== RUN   TestSignWithPassphrase_DB
+--- PASS: TestSignWithPassphrase_DB (0.00s)
+=== RUN   TestTimedUnlock_DB
+--- PASS: TestTimedUnlock_DB (0.25s)
+=== RUN   TestOverrideUnlock_DB
+--- PASS: TestOverrideUnlock_DB (0.25s)
+=== RUN   TestTimedUnlock_DB2
+--- PASS: TestTimedUnlock_DB2 (0.27s)
+=== RUN   TestSignRace_DB
+--- PASS: TestSignRace_DB (0.02s)
+=== CONT  TestWatchNewFile
+=== CONT  TestKeyForDirectICAP
+=== CONT  TestV3_PBKDF2_4
+=== CONT  TestV3_PBKDF2_1
+--- PASS: TestKeyForDirectICAP (0.15s)
+=== CONT  TestAccountCache_WatchRemove
+--- PASS: TestV3_PBKDF2_4 (1.12s)
+=== CONT  TestV3_PBKDF2_3
+--- PASS: TestV3_PBKDF2_1 (1.22s)
+=== CONT  TestWatchNoDir
+--- PASS: TestV3_PBKDF2_3 (1.02s)
+=== CONT  TestV3_PBKDF2_2
+--- PASS: TestV3_PBKDF2_2 (0.95s)
+=== CONT  TestV1_1
+--- PASS: TestAccountCache_WatchRemove (3.50s)
+=== CONT  TestV1_2
+--- PASS: TestV1_1 (2.40s)
+=== CONT  TestV3_Scrypt_2
+--- PASS: TestWatchNewFile (5.60s)
+=== CONT  TestV3_Scrypt_1
+--- PASS: TestV1_2 (2.56s)
+--- PASS: TestV3_Scrypt_2 (1.79s)
+--- PASS: TestV3_Scrypt_1 (1.75s)
+--- PASS: TestWatchNoDir (6.50s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/accounts	14.230s
+=== RUN   TestTypeCheck
+--- PASS: TestTypeCheck (0.00s)
+=== RUN   TestSimpleMethodUnpack
+--- PASS: TestSimpleMethodUnpack (0.00s)
+=== RUN   TestUnpackSetInterfaceSlice
+--- PASS: TestUnpackSetInterfaceSlice (0.00s)
+=== RUN   TestPack
+--- PASS: TestPack (0.00s)
+=== RUN   TestMethodPack
+--- PASS: TestMethodPack (0.00s)
+=== RUN   TestReader
+--- SKIP: TestReader (0.00s)
+	abi_test.go:469: 
+=== RUN   TestTestNumbers
+--- PASS: TestTestNumbers (0.00s)
+=== RUN   TestTestString
+--- PASS: TestTestString (0.00s)
+=== RUN   TestTestBool
+--- PASS: TestTestBool (0.00s)
+=== RUN   TestTestSlice
+--- PASS: TestTestSlice (0.00s)
+=== RUN   TestMethodSignature
+--- PASS: TestMethodSignature (0.00s)
+=== RUN   TestMultiPack
+--- PASS: TestMultiPack (0.00s)
+=== RUN   TestInputVariableInputLength
+--- PASS: TestInputVariableInputLength (0.00s)
+=== RUN   TestDefaultFunctionParsing
+--- PASS: TestDefaultFunctionParsing (0.00s)
+=== RUN   TestBareEvents
+--- PASS: TestBareEvents (0.00s)
+=== RUN   TestMultiReturnWithStruct
+--- PASS: TestMultiReturnWithStruct (0.00s)
+=== RUN   TestMultiReturnWithSlice
+--- PASS: TestMultiReturnWithSlice (0.00s)
+=== RUN   TestMarshalArrays
+--- PASS: TestMarshalArrays (0.00s)
+=== RUN   TestUnmarshal
+--- PASS: TestUnmarshal (0.00s)
+=== RUN   TestEventId
+--- PASS: TestEventId (0.00s)
+=== RUN   TestNumberTypes
+--- PASS: TestNumberTypes (0.00s)
+=== RUN   TestPackNumber
+--- PASS: TestPackNumber (0.00s)
+=== RUN   TestSigned
+--- PASS: TestSigned (0.00s)
+=== RUN   ExampleJSON
+--- PASS: ExampleJSON (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/accounts/abi	(cached)
+=== RUN   TestBindings
+--- PASS: TestBindings (7.81s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/accounts/abi/bind	7.872s
+FAIL	github.com/ethereumproject/go-ethereum/cmd/geth [build failed]
+=== RUN   TestBigMax
+--- PASS: TestBigMax (0.00s)
+=== RUN   TestBigMin
+--- PASS: TestBigMin (0.00s)
+=== RUN   TestIsHex
+--- PASS: TestIsHex (0.00s)
+=== RUN   TestFromHex
+--- PASS: TestFromHex (0.00s)
+=== RUN   TestFromHexOddLength
+--- PASS: TestFromHexOddLength (0.00s)
+=== RUN   Test
+OK: 5 passed
+--- PASS: Test (0.00s)
+=== RUN   TestBytesConversion
+--- PASS: TestBytesConversion (0.00s)
+=== RUN   TestHashJsonValidation
+--- PASS: TestHashJsonValidation (0.00s)
+=== RUN   TestAddressUnmarshalJSON
+--- PASS: TestAddressUnmarshalJSON (0.00s)
+=== RUN   TestClientSessionIdentityIsNotNilOnInit
+--- PASS: TestClientSessionIdentityIsNotNilOnInit (0.00s)
+	version_test.go:11: VERSION=unknown GO=go1.10.3 GOOS=linux GOARCH=amd64 SESSIONID=NWmZ HOSTNAME=archlinux USER=k2 MACHINE=979624a8 PID=13506
+=== RUN   TestSessionIDIsExpected
+--- PASS: TestSessionIDIsExpected (0.00s)
+=== RUN   TestSessionVersionInformation
+--- PASS: TestSessionVersionInformation (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/common	(cached)
+=== RUN   TestCompiler
+--- SKIP: TestCompiler (3.11s)
+	solidity_test.go:51: WARNING: a newer version of solc found (0.4.24, expect 0.1.1)
+=== RUN   TestCompileError
+--- SKIP: TestCompileError (0.00s)
+	solidity_test.go:72: solc not found: skip
+=== RUN   TestNoCompiler
+--- PASS: TestNoCompiler (0.00s)
+	solidity_test.go:86: solidity quits with error: exec: "/path/to/solc": stat /path/to/solc: no such file or directory
+=== RUN   TestSaveInfo
+--- PASS: TestSaveInfo (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/common/compiler	(cached)
+=== RUN   TestEncode
+--- PASS: TestEncode (0.00s)
+=== RUN   TestDecode
+--- PASS: TestDecode (0.00s)
+=== RUN   TestEncodeBig
+--- PASS: TestEncodeBig (0.00s)
+=== RUN   TestDecodeBig
+--- PASS: TestDecodeBig (0.00s)
+=== RUN   TestEncodeUint64
+--- PASS: TestEncodeUint64 (0.00s)
+=== RUN   TestDecodeUint64
+--- PASS: TestDecodeUint64 (0.00s)
+=== RUN   TestUnmarshalBytes
+--- PASS: TestUnmarshalBytes (0.00s)
+=== RUN   TestMarshalBytes
+--- PASS: TestMarshalBytes (0.00s)
+=== RUN   TestUnmarshalBig
+--- PASS: TestUnmarshalBig (0.00s)
+=== RUN   TestMarshalBig
+--- PASS: TestMarshalBig (0.00s)
+=== RUN   TestUnmarshalUint64
+--- PASS: TestUnmarshalUint64 (0.00s)
+=== RUN   TestMarshalUint64
+--- PASS: TestMarshalUint64 (0.00s)
+=== RUN   TestMarshalUint
+--- PASS: TestMarshalUint (0.00s)
+=== RUN   TestUnmarshalUint
+--- PASS: TestUnmarshalUint (0.00s)
+=== RUN   TestUnmarshalFixedUnprefixedText
+--- PASS: TestUnmarshalFixedUnprefixedText (0.00s)
+=== RUN   ExampleUnmarshalFixedText
+--- PASS: ExampleUnmarshalFixedText (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/common/hexutil	(cached)
+=== RUN   TestGetAuthContent
+--- PASS: TestGetAuthContent (0.01s)
+=== RUN   TestRegisterScheme
+--- PASS: TestRegisterScheme (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/common/httpclient	(cached)
+=== RUN   TestHexOrDecimal256
+--- PASS: TestHexOrDecimal256 (0.00s)
+=== RUN   TestMustParseBig256
+--- PASS: TestMustParseBig256 (0.00s)
+=== RUN   TestBigMax
+--- PASS: TestBigMax (0.00s)
+=== RUN   TestBigMin
+--- PASS: TestBigMin (0.00s)
+=== RUN   TestFirstBigSet
+--- PASS: TestFirstBigSet (0.00s)
+=== RUN   TestPaddedBigBytes
+--- PASS: TestPaddedBigBytes (0.00s)
+=== RUN   TestReadBits
+--- PASS: TestReadBits (0.00s)
+=== RUN   TestU256
+--- PASS: TestU256 (0.00s)
+=== RUN   TestBigEndianByteAt
+--- PASS: TestBigEndianByteAt (0.00s)
+=== RUN   TestLittleEndianByteAt
+--- PASS: TestLittleEndianByteAt (0.00s)
+=== RUN   TestS256
+--- PASS: TestS256 (0.00s)
+=== RUN   TestExp
+--- PASS: TestExp (0.00s)
+=== RUN   TestOverflow
+--- PASS: TestOverflow (0.00s)
+=== RUN   TestHexOrDecimal64
+--- PASS: TestHexOrDecimal64 (0.00s)
+=== RUN   TestMustParseUint64
+--- PASS: TestMustParseUint64 (0.00s)
+=== RUN   TestMustParseUint64Panic
+--- PASS: TestMustParseUint64Panic (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/common/math	(cached)
+FAIL	github.com/ethereumproject/go-ethereum/console [build failed]
+FAIL	github.com/ethereumproject/go-ethereum/core [build failed]
+=== RUN   TestNodeIteratorCoverage
+--- PASS: TestNodeIteratorCoverage (0.01s)
+=== RUN   Test
+OK: 5 passed
+--- PASS: Test (0.01s)
+=== RUN   TestNewNonce
+--- PASS: TestNewNonce (0.00s)
+=== RUN   TestRemove
+--- PASS: TestRemove (0.00s)
+=== RUN   TestReuse
+--- PASS: TestReuse (0.00s)
+=== RUN   TestRemoteNonceChange
+--- PASS: TestRemoteNonceChange (0.00s)
+=== RUN   TestSetNonce
+--- PASS: TestSetNonce (0.00s)
+=== RUN   TestSnapshot2
+--- PASS: TestSnapshot2 (0.00s)
+=== RUN   TestUpdateLeaks
+--- PASS: TestUpdateLeaks (0.02s)
+=== RUN   TestIntermediateLeaks
+--- PASS: TestIntermediateLeaks (0.06s)
+=== RUN   TestCopy
+--- PASS: TestCopy (0.02s)
+=== RUN   TestSnapshotRandom
+--- PASS: TestSnapshotRandom (20.41s)
+=== RUN   TestCopyOfCopy
+--- PASS: TestCopyOfCopy (0.00s)
+=== RUN   TestEmptyStateSync
+--- PASS: TestEmptyStateSync (0.00s)
+=== RUN   TestIterativeStateSyncIndividual
+--- PASS: TestIterativeStateSyncIndividual (0.02s)
+=== RUN   TestIterativeStateSyncBatched
+--- PASS: TestIterativeStateSyncBatched (0.01s)
+=== RUN   TestIterativeDelayedStateSync
+--- PASS: TestIterativeDelayedStateSync (0.03s)
+=== RUN   TestIterativeRandomStateSyncIndividual
+--- PASS: TestIterativeRandomStateSyncIndividual (0.02s)
+=== RUN   TestIterativeRandomStateSyncBatched
+--- PASS: TestIterativeRandomStateSyncBatched (0.01s)
+=== RUN   TestIterativeRandomDelayedStateSync
+--- PASS: TestIterativeRandomDelayedStateSync (0.01s)
+=== RUN   TestIncompleteStateSync
+--- PASS: TestIncompleteStateSync (5.19s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/core/state	(cached)
+=== RUN   TestBlockEncoding
+--- PASS: TestBlockEncoding (0.00s)
+	block_test.go:55: transaction data 0x{0 a c350 c4200c2720 a  1b 9bea4c4daac7c7c52e093e6a4c35dbbcf8856f1af7b059ba20253e70848d094f 8a8fae537ce25ed8cb5af9adac3f141af69bd515bd2ba031522df09b97dd72b1}, hash 0x77b19baa4de67e45a7b26e4a220bccdbb6731885aa9927064e239ca232023215
+=== RUN   TestBloom
+--- PASS: TestBloom (0.00s)
+=== RUN   TestChainId
+--- PASS: TestChainId (0.00s)
+=== RUN   TestClassicChainId
+--- PASS: TestClassicChainId (0.00s)
+=== RUN   TestMordenChainId
+--- PASS: TestMordenChainId (0.00s)
+=== RUN   TestCompatibleSign
+--- PASS: TestCompatibleSign (0.00s)
+=== RUN   TestChainIdSigner_Equal
+--- PASS: TestChainIdSigner_Equal (0.00s)
+=== RUN   TestTransactionSigHash
+--- PASS: TestTransactionSigHash (0.00s)
+=== RUN   TestTransactionEncode
+--- PASS: TestTransactionEncode (0.00s)
+=== RUN   TestRecipientEmpty
+--- PASS: TestRecipientEmpty (0.00s)
+=== RUN   TestRecipientNormal
+--- PASS: TestRecipientNormal (0.00s)
+=== RUN   TestTransactionPriceNonceSort
+--- PASS: TestTransactionPriceNonceSort (0.48s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/core/types	(cached)
+=== RUN   TestJumpDestAnalysis
+--- PASS: TestJumpDestAnalysis (0.00s)
+=== RUN   TestPrecompiledModExp
+=== RUN   TestPrecompiledModExp/eip_example1-Gas=13056
+=== RUN   TestPrecompiledModExp/eip_example2-Gas=13056
+=== RUN   TestPrecompiledModExp/nagydani-1-square-Gas=204
+=== RUN   TestPrecompiledModExp/nagydani-1-qube-Gas=204
+=== RUN   TestPrecompiledModExp/nagydani-1-pow0x10001-Gas=3276
+=== RUN   TestPrecompiledModExp/nagydani-2-square-Gas=665
+=== RUN   TestPrecompiledModExp/nagydani-2-qube-Gas=665
+=== RUN   TestPrecompiledModExp/nagydani-2-pow0x10001-Gas=10649
+=== RUN   TestPrecompiledModExp/nagydani-3-square-Gas=1894
+=== RUN   TestPrecompiledModExp/nagydani-3-qube-Gas=1894
+=== RUN   TestPrecompiledModExp/nagydani-3-pow0x10001-Gas=30310
+=== RUN   TestPrecompiledModExp/nagydani-4-square-Gas=5580
+=== RUN   TestPrecompiledModExp/nagydani-4-qube-Gas=5580
+=== RUN   TestPrecompiledModExp/nagydani-4-pow0x10001-Gas=89292
+=== RUN   TestPrecompiledModExp/nagydani-5-square-Gas=17868
+=== RUN   TestPrecompiledModExp/nagydani-5-qube-Gas=17868
+=== RUN   TestPrecompiledModExp/nagydani-5-pow0x10001-Gas=285900
+--- PASS: TestPrecompiledModExp (0.00s)
+    --- PASS: TestPrecompiledModExp/eip_example1-Gas=13056 (0.00s)
+    --- PASS: TestPrecompiledModExp/eip_example2-Gas=13056 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-1-square-Gas=204 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-1-qube-Gas=204 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-1-pow0x10001-Gas=3276 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-2-square-Gas=665 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-2-qube-Gas=665 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-2-pow0x10001-Gas=10649 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-3-square-Gas=1894 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-3-qube-Gas=1894 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-3-pow0x10001-Gas=30310 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-4-square-Gas=5580 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-4-qube-Gas=5580 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-4-pow0x10001-Gas=89292 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-5-square-Gas=17868 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-5-qube-Gas=17868 (0.00s)
+    --- PASS: TestPrecompiledModExp/nagydani-5-pow0x10001-Gas=285900 (0.00s)
+=== RUN   TestPrecompiledBn256Add
+=== RUN   TestPrecompiledBn256Add/chfast1-Gas=500
+=== RUN   TestPrecompiledBn256Add/chfast2-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio1-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio2-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio3-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio4-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio5-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio6-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio7-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio8-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio9-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio10-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio11-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio12-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio13-Gas=500
+=== RUN   TestPrecompiledBn256Add/cdetrio14-Gas=500
+--- PASS: TestPrecompiledBn256Add (0.00s)
+    --- PASS: TestPrecompiledBn256Add/chfast1-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/chfast2-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio1-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio2-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio3-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio4-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio5-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio6-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio7-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio8-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio9-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio10-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio11-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio12-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio13-Gas=500 (0.00s)
+    --- PASS: TestPrecompiledBn256Add/cdetrio14-Gas=500 (0.00s)
+=== RUN   TestPrecompiledBn256ScalarMul
+=== RUN   TestPrecompiledBn256ScalarMul/chfast1-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/chfast2-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/chfast3-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio1-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio2-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio3-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio4-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio5-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio6-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio7-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio8-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio9-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio10-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio11-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio12-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio13-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio14-Gas=40000
+=== RUN   TestPrecompiledBn256ScalarMul/cdetrio15-Gas=40000
+--- PASS: TestPrecompiledBn256ScalarMul (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/chfast1-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/chfast2-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/chfast3-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio1-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio2-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio3-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio4-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio5-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio6-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio7-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio8-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio9-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio10-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio11-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio12-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio13-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio14-Gas=40000 (0.00s)
+    --- PASS: TestPrecompiledBn256ScalarMul/cdetrio15-Gas=40000 (0.00s)
+=== RUN   TestPrecompiledBn256Pairing
+=== RUN   TestPrecompiledBn256Pairing/jeff1-Gas=260000
+=== RUN   TestPrecompiledBn256Pairing/jeff2-Gas=260000
+=== RUN   TestPrecompiledBn256Pairing/jeff3-Gas=260000
+=== RUN   TestPrecompiledBn256Pairing/jeff4-Gas=340000
+=== RUN   TestPrecompiledBn256Pairing/jeff5-Gas=340000
+=== RUN   TestPrecompiledBn256Pairing/jeff6-Gas=260000
+=== RUN   TestPrecompiledBn256Pairing/empty_data-Gas=100000
+=== RUN   TestPrecompiledBn256Pairing/one_point-Gas=180000
+=== RUN   TestPrecompiledBn256Pairing/two_point_match_2-Gas=260000
+=== RUN   TestPrecompiledBn256Pairing/two_point_match_3-Gas=260000
+=== RUN   TestPrecompiledBn256Pairing/two_point_match_4-Gas=260000
+=== RUN   TestPrecompiledBn256Pairing/ten_point_match_1-Gas=900000
+=== RUN   TestPrecompiledBn256Pairing/ten_point_match_2-Gas=900000
+=== RUN   TestPrecompiledBn256Pairing/ten_point_match_3-Gas=260000
+--- PASS: TestPrecompiledBn256Pairing (0.16s)
+    --- PASS: TestPrecompiledBn256Pairing/jeff1-Gas=260000 (0.01s)
+    --- PASS: TestPrecompiledBn256Pairing/jeff2-Gas=260000 (0.01s)
+    --- PASS: TestPrecompiledBn256Pairing/jeff3-Gas=260000 (0.01s)
+    --- PASS: TestPrecompiledBn256Pairing/jeff4-Gas=340000 (0.01s)
+    --- PASS: TestPrecompiledBn256Pairing/jeff5-Gas=340000 (0.01s)
+    --- PASS: TestPrecompiledBn256Pairing/jeff6-Gas=260000 (0.02s)
+    --- PASS: TestPrecompiledBn256Pairing/empty_data-Gas=100000 (0.00s)
+    --- PASS: TestPrecompiledBn256Pairing/one_point-Gas=180000 (0.01s)
+    --- PASS: TestPrecompiledBn256Pairing/two_point_match_2-Gas=260000 (0.01s)
+    --- PASS: TestPrecompiledBn256Pairing/two_point_match_3-Gas=260000 (0.01s)
+    --- PASS: TestPrecompiledBn256Pairing/two_point_match_4-Gas=260000 (0.01s)
+    --- PASS: TestPrecompiledBn256Pairing/ten_point_match_1-Gas=900000 (0.04s)
+    --- PASS: TestPrecompiledBn256Pairing/ten_point_match_2-Gas=900000 (0.03s)
+    --- PASS: TestPrecompiledBn256Pairing/ten_point_match_3-Gas=260000 (0.01s)
+=== RUN   TestMemoryGasCost
+--- PASS: TestMemoryGasCost (0.00s)
+=== RUN   TestByteOp
+--- PASS: TestByteOp (0.00s)
+=== RUN   TestSHL
+--- PASS: TestSHL (0.00s)
+=== RUN   TestSHR
+--- PASS: TestSHR (0.00s)
+=== RUN   TestSAR
+--- PASS: TestSAR (0.00s)
+=== RUN   TestSGT
+--- PASS: TestSGT (0.00s)
+=== RUN   TestSLT
+--- PASS: TestSLT (0.00s)
+=== RUN   TestOpMstore
+--- PASS: TestOpMstore (0.00s)
+=== RUN   TestStoreCapture
+--- PASS: TestStoreCapture (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/core/vm	(cached)
+FAIL	github.com/ethereumproject/go-ethereum/core/vm/runtime [build failed]
+=== RUN   TestEcrecover
+--- PASS: TestEcrecover (0.00s)
+=== RUN   TestSha3
+--- PASS: TestSha3 (0.00s)
+=== RUN   TestSha3Hash
+--- PASS: TestSha3Hash (0.00s)
+=== RUN   TestSha256
+--- PASS: TestSha256 (0.00s)
+=== RUN   TestRipemd160
+--- PASS: TestRipemd160 (0.00s)
+=== RUN   Test0Key
+--- PASS: Test0Key (0.00s)
+=== RUN   TestSign
+--- PASS: TestSign (0.00s)
+=== RUN   TestInvalidSign
+--- PASS: TestInvalidSign (0.00s)
+=== RUN   TestNewContractAddress
+--- PASS: TestNewContractAddress (0.00s)
+=== RUN   TestLoadECDSAFile
+--- PASS: TestLoadECDSAFile (0.00s)
+=== RUN   TestValidateSignatureValues
+--- PASS: TestValidateSignatureValues (0.00s)
+=== RUN   TestPythonIntegration
+msg: 41b1a0649752af1b28b3dc29a1556eee781e4a4c3a1f7f53f90fa834de098c4d, privkey: 289c2857d4598e37fb9647507e47a309d6133539bf21a8b9cb6df88fd5232032 sig: 31a3413a4b0580cfe9ec2b6dac10dc70d5c79d0948fa39c1a799f47c1bb7bdb90272b4f6fb44550afd75d882733bb9f2108e2de83f35ddb2fa0f3cbc750eb5c400
+msg: 00000000000000000000000000000000, privkey: 289c2857d4598e37fb9647507e47a309d6133539bf21a8b9cb6df88fd5232032 sig: 31a3413a4b0580cfe9ec2b6dac10dc70d5c79d0948fa39c1a799f47c1bb7bdb90272b4f6fb44550afd75d882733bb9f2108e2de83f35ddb2fa0f3cbc750eb5c400
+--- PASS: TestPythonIntegration (0.00s)
+=== RUN   TestBox
+--- PASS: TestBox (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/crypto	(cached)
+=== RUN   TestG1Marshal
+--- PASS: TestG1Marshal (0.00s)
+=== RUN   TestG2Marshal
+--- PASS: TestG2Marshal (0.00s)
+=== RUN   TestBilinearity
+--- PASS: TestBilinearity (0.04s)
+=== RUN   TestTripartiteDiffieHellman
+--- PASS: TestTripartiteDiffieHellman (0.03s)
+=== RUN   TestExamplePair
+--- PASS: TestExamplePair (0.03s)
+=== RUN   TestGFpNeg
+--- PASS: TestGFpNeg (0.00s)
+=== RUN   TestGFpAdd
+--- PASS: TestGFpAdd (0.00s)
+=== RUN   TestGFpSub
+--- PASS: TestGFpSub (0.00s)
+=== RUN   TestGFpMul
+--- PASS: TestGFpMul (0.00s)
+=== RUN   TestLatticeReduceCurve
+--- PASS: TestLatticeReduceCurve (0.00s)
+=== RUN   TestLatticeReduceTarget
+--- PASS: TestLatticeReduceTarget (0.00s)
+=== RUN   TestRandomG2Marshal
+--- PASS: TestRandomG2Marshal (0.01s)
+	main_test.go:16: 4084731355210113300750300224910414117279454788630885608862273852809593332856: 1b3b06c66fc051aa9c8e64cc8f1a7e8c5e2128793a0985805c3d8034bcca28ef0a922568510768640b8e8d8a4f706dd3d40f7ff514dc3389c7b044f9385b8b380c4029c2fd4592455e1ff552eeff0ce3cbdfe24a1705a25502e980c2eeba3eef20e212bf4d2a16a2ecf7a19fb504dd9b760107c535d6be6645c2afc922b33e52
+	main_test.go:16: 18355217090979688348358413190265800870964133914764155041357610046636521196647: 1a355952dcaa1112a82c392a33ac25e1d75a05bdd3c6e2f4f4cbc047f833d6632e85274ac5faba087977be006baa2ecebe0c43412b6c485af2111b53dc08a9d1088a7f2009a8971b4cd62307bad5da81d4a388b40ce92a9dded91a4833768fdb22996b168cf93b2e48c28f29329065a5e444dc7ca92060260305d4fe76718572
+	main_test.go:16: 6627563524185779178089029999940665310079422802483122789565307144711083287101: 1d7c34aef0d1139b564ae624873d7c2a809b8c327b00a54e6e2fed368edf7e0c25b3b18d58d35ea15c92cc157db1cf060b504619026ad37eedda97b65b665c3109fd9a6aa75b918bf4e2edf2b8321393ea06c215c614adffe11228b0e1b0b9b0055d6b1259775af1d7c0fb6dd7158064e126e25feb82fdf9f9d915819f274b1c
+	main_test.go:16: 21547926119247610148195261071751336750942091103198632916935102770931178543828: 0ad1cf2ef34d1ff23b977d59e3a9239b5d7fcf8183543ab356af8a1adbed4c3f04f140d03ecb57608eb98af986a4102b97f67517433a12707bb92e0d0f86f50b1d770f323ee6516c74c9973c1e4bf757485ea1a01caf27aadbd8e62be188ce4b20f532deb075ebefbf474711224f6bf3b6a93222f840f9ad7191fd9c72671cf0
+	main_test.go:16: 14110093945798607320369108250339909205096814780660534827516162625829327877079: 0820ad984addb1e79a2ce16160e0655fe3a722ead4e6421228bacf979a696ad5199a946f76d0f93bd784b58d697c720a95d567e8db76c38ed2cc3e42977289a41579dfb4d1c800d7d313e216deaa34137044206609d8722071d87d820ecf18c716030077806373904ffcf051b0db942d00f2ed73e23a59541213e3f2d1b980b4
+	main_test.go:16: 2137825892625896486643183750480845179291179115812447104117422422923013272636: 065aa1659549af6b4c56ada0c52089317acd088f491ce7f00dca896ec49b61451664a3cbdc7269483787ec418679588f57f9cbc53431bc3ea1e99b02d76e918530075b01ab117cc87af9b76a4b9c4e445c582618125483db32cec2afee895c2e041b909cd6d3f6fb3d92808907260f99550c47906f2f008677b5bf706db68a52
+	main_test.go:16: 6254253702277702888702545068910724332191902263171573499548439652451873044431: 220139c00dc1f49f61006482c667019b497585d6da495de932ceea3731767afc2f82b8162610fff60e4b75b9bdb603788de2d1c0975ed0574d50ae1aef7d1f2f2fe9bfb8ff8e9741a359f5de253fcd57902d0126b884ecd54d5967e18c3d9e14206954bf01889905e2c919636ee0a5d5092728a0c9e404adcb606c253ddea060
+	main_test.go:16: 6833946523173064836965198592043235344111961731485693934059658735555369280423: 045e37089642caccdaad0d49c2007ba1ee012389ecf8fe2dbcafe9b5f14fc0a01879d2f24a0d6300d6fbacf9f2c426faeb0aa41963b14e3183479af730f6462b23f11465cb0ac34a1b63cc84bff7c9bb528e37027e42f51e662b5a1038fb80042f54fbd15be9a44bf0561fa829a0bcbd7f8ea97cc9a6581f7162a43c25ea1eb0
+	main_test.go:16: 10745000036503920703613549456742888651417195987109238419958266480353686850856: 300bd6f305ee0f5021a0c6329217fa9a530ce1e44abc009c37d2607b62f8d1c62df5b19a9d8520a880f8c9627c14097ec27df93a4b3798d5fbfd0fccdc7b0dc12e3759a2a720b4bbacd4aaf85a07b5e8e4b0af22a1bca3dded8386c3b3a3a3452a1d717d028c8d3d5435c19d6c4de0056e4077888c4ab439a7852a618bceb1ad
+	main_test.go:16: 7372710164377009583152908102534318064981909089890133757284745190583074130823: 0a5a5bc21d81028d983bff8453135f51cbe8bc1a6076b9bad9282d530cecbe5217b8f4854f8223ac44e611a5bf849f2c18bcec9bca2bc37c78300a34e90b98fc0e2cc6cf3cb317f16877ca14928cd5ff270c1fac0c6382a16ddbdb5f4bf52bc7007321a1efb33030add64ddd6a229c2f7bc1c91fae8829c6067d9b68da7e7710
+=== RUN   TestPairings
+--- PASS: TestPairings (0.09s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/crypto/bn256/cloudflare	(cached)
+=== RUN   TestGFp2Invert
+--- PASS: TestGFp2Invert (0.00s)
+=== RUN   TestGFp6Invert
+--- PASS: TestGFp6Invert (0.00s)
+=== RUN   TestGFp12Invert
+--- PASS: TestGFp12Invert (0.00s)
+=== RUN   TestCurveImpl
+--- PASS: TestCurveImpl (0.00s)
+=== RUN   TestOrderG1
+--- PASS: TestOrderG1 (0.00s)
+=== RUN   TestOrderG2
+--- PASS: TestOrderG2 (0.01s)
+=== RUN   TestOrderGT
+--- PASS: TestOrderGT (0.08s)
+=== RUN   TestBilinearity
+--- PASS: TestBilinearity (0.37s)
+=== RUN   TestG1Marshal
+--- PASS: TestG1Marshal (0.02s)
+=== RUN   TestG2Marshal
+--- PASS: TestG2Marshal (0.02s)
+=== RUN   TestG1Identity
+--- PASS: TestG1Identity (0.00s)
+=== RUN   TestG2Identity
+--- PASS: TestG2Identity (0.00s)
+=== RUN   TestTripartiteDiffieHellman
+--- PASS: TestTripartiteDiffieHellman (0.24s)
+=== RUN   TestRandomG2Marshal
+--- PASS: TestRandomG2Marshal (0.11s)
+	main_test.go:16: 13621552028134263780951001183099354408170335711199722874327274661562771819256: 02a60e5925894f4acb233c9eafc84036303c3a11207043397a94f62f6350ab69120345791288e3e797582efaec0ed0f02ff2e428f6c5a6af64e0aff88f33b07b13f8c710e33fe0754bfd6e1b56b4fd2c0b2e8f141cb4c705100cfebd0a10babe1989a8924e6ecfd03a567e3abcb9a5f4d1ae5cc4b07926d1e2c68bce47b9ef8d
+	main_test.go:16: 8314754516334052809203467982691286030436606239872751383887078356367526213295: 184767931ab1941ff7dae8566b6ddae5b85fcc99c4ba285574ca654ded0225d70e4a641a7afa85c3431e8dee3ace0159969bd283acddd9699704720f0fc9c80e1dd04cb49256cadd0ce60558d4255f3c4ce41bf05d6f56c5fd05dc8ac566d2640d9fb24fa2bcee6a83d2ae89e781385b5ecf5125f9ccd36c04d81d3bae6d1c90
+	main_test.go:16: 1636213853941177839040826247572597391109274960241384059631172232875281841721: 25849b97df3391e172e19d374fccb2cca17beb6939dbdafada80261d148f54eb2bd42e594c85f01929a4d8f709a1591478af8a8007936c48e78076168e63d50a29601cb9ce87b9046428cf8dea36077caf664838384962c5aba656ea192d364c110492119c1a12cb2255040f3d65b2141bbee0dcb9e7dbaba32f20e45996f7cf
+	main_test.go:16: 2612369654011229505915190062206192398130748043449050752939630254888133486039: 129d0e9f9c4b63b6731a224d4f091ef11be5249169ec5fd88347854f0b807c691fcd2e9f4e0fc03b78743d7f5423f7871004ccdbe5ef5db03d3119eec6fff87301182dc29363a602d16b763660e27afda8b094453ea115f4522a11b4b4823e8914b364445875c9131451dcb86107c5eceae02ef6caf52f646a25294ba2f91aa6
+	main_test.go:16: 14945097356949143625604586620415823861264859219046040592060448463676115226286: 26ae2a845263c943ee921e0536c5eaf22ce6ecf6df948d177264afa6741c30ea21c6a69af19fb624ddcef49f31d881bfbdd2a32b5016bdf0367b1b0b99b4fbd125af90f8825395c5c8b9cfa4b2ca3810229af526116936b5ca55369427ec312715034a74fed559480a595ba6411cba3ccbca07091a4057cc7d9fc9b3841a1d25
+	main_test.go:16: 4177060874859059924754367804734689515836753921934406493894545720329245213371: 05fbe160b45bc36dfd0cd21c4ca2da79785a0b37a128e93697f757f2c7ccaf59148ebd68533e3bab97d81b2b48a0ce543214054e33d9501ded1211620105aa9f113c4bf6876d42aae3a269d3aff36bc584eb96220d4f7c0f2067faf2209fd0da2854d0cc9d78003b04d21fd4a5005d788abb24df9bb06ddc34d54b09333490c5
+	main_test.go:16: 10941564833709291484873431277989631855532901622418044555004653720569711457311: 1462b131d6f7c2e46825ece8797e43712792ae6adcb13b3e1bf192fafaaa4d7224beca49b128cf7f5839f20d219aa034815810acb481c738600a7fe73bbe8ba810baea4691edf3a39f54df4f458bda41325892803a0b748fa7ff01f338db09ed22456e8f6877581fd36fc79555020215d99f7670e2402972032aca30968ef718
+	main_test.go:16: 4913556745786027814072545689583138180773555556543407635767667066037489989251: 2a39efc0f72dab57f6caea4c07dd5a3f1665f00a2efb307a5b1ccfab58cacea32aefbe824cbbab4bcdefea99c137da91a4b53980abbbe67851953e1d6123ef1529ec43cd5942159b4002f8e4a81417e3042d8582bc2365529b9092e016fff2402440b3bce423d20d601a6976b8a830d4b8eabad5008376eab40cca6382795634
+	main_test.go:16: 10862775644893409415982108619663931296292961388424744504378394268428560911880: 15ce06e8cd3f40c8ae5fe3dbe0fb17322150cfe64bbc424aa2a80fe5590a79ed031ece576c81e8606edd1f5001a3275e10f1fae9a15b47b1306948c70051ea3d03ce1f0818805d370341c1009c6e32ba96a65f4eef947c901064d14374e30ea124c5f170ccaeddc8409d1190c5d24b6e3a4804c20dd62dfe621a8f3444b7d366
+	main_test.go:16: 16564390234179486507114101734155078737953155243726083751927261513004388341261: 059fac00e9d3101bbeef02898b4d519b94627599d75b5e6e59375dc815f4915707c4e7d2544c5d35b355f729510766468830317946bdd6b9425895f8f21051c92c3eada44674a550170eb3d295bfd70cf28aebf8d76af4ee90f18ccb94d5c3fc2fb34d0e56749f955ae1094f2eed1c1144dbe2f29e46d4375455cf1a430f6cda
+=== RUN   TestPairings
+--- PASS: TestPairings (0.42s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/crypto/bn256/google	(cached)
+=== RUN   TestKDF
+--- PASS: TestKDF (0.00s)
+=== RUN   TestSharedKey
+--- PASS: TestSharedKey (0.00s)
+=== RUN   TestSharedKeyPadding
+--- PASS: TestSharedKeyPadding (0.00s)
+=== RUN   TestTooBigSharedKey
+--- PASS: TestTooBigSharedKey (0.00s)
+=== RUN   TestMarshalPublic
+--- PASS: TestMarshalPublic (0.00s)
+=== RUN   TestMarshalPrivate
+--- PASS: TestMarshalPrivate (0.00s)
+=== RUN   TestPrivatePEM
+--- PASS: TestPrivatePEM (0.00s)
+=== RUN   TestPublicPEM
+--- PASS: TestPublicPEM (0.00s)
+=== RUN   TestEncryptDecrypt
+--- PASS: TestEncryptDecrypt (0.00s)
+=== RUN   TestDecryptShared2
+--- PASS: TestDecryptShared2 (0.00s)
+=== RUN   TestMarshalEncryption
+--- PASS: TestMarshalEncryption (0.00s)
+=== RUN   TestParamSelection
+--- PASS: TestParamSelection (0.00s)
+=== RUN   TestBasicKeyValidation
+--- PASS: TestBasicKeyValidation (0.00s)
+=== RUN   TestSharedKeyStatic
+--- PASS: TestSharedKeyStatic (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/crypto/ecies	(cached)
+=== RUN   TestReadBits
+--- PASS: TestReadBits (0.00s)
+=== RUN   TestPrivkeyGenerate
+--- PASS: TestPrivkeyGenerate (0.00s)
+=== RUN   TestSignatureValidity
+--- PASS: TestSignatureValidity (0.00s)
+=== RUN   TestInvalidRecoveryID
+--- PASS: TestInvalidRecoveryID (0.00s)
+=== RUN   TestSignDeterministic
+--- PASS: TestSignDeterministic (0.00s)
+=== RUN   TestSignNondeterministic
+--- PASS: TestSignNondeterministic (0.00s)
+=== RUN   TestSignNondeterministic2
+--- PASS: TestSignNondeterministic2 (0.00s)
+=== RUN   TestSignAndRecover
+--- PASS: TestSignAndRecover (0.00s)
+=== RUN   TestRandomMessagesWithSameKey
+--- PASS: TestRandomMessagesWithSameKey (0.82s)
+=== RUN   TestRandomMessagesWithRandomKeys
+--- PASS: TestRandomMessagesWithRandomKeys (0.84s)
+=== RUN   TestRecoveryOfRandomSignature
+--- PASS: TestRecoveryOfRandomSignature (0.11s)
+=== RUN   TestRandomMessagesAgainstValidSig
+--- PASS: TestRandomMessagesAgainstValidSig (0.53s)
+=== RUN   TestZeroPrivkey
+--- PASS: TestZeroPrivkey (0.00s)
+=== RUN   TestRecoverSanity
+--- PASS: TestRecoverSanity (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/crypto/secp256k1	(cached)
+=== RUN   TestKeccakKats
+--- PASS: TestKeccakKats (0.20s)
+=== RUN   TestAppend
+--- PASS: TestAppend (0.00s)
+=== RUN   TestAppendNoRealloc
+--- PASS: TestAppendNoRealloc (0.00s)
+=== RUN   TestSqueezing
+--- PASS: TestSqueezing (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/crypto/sha3	(cached)
+FAIL	github.com/ethereumproject/go-ethereum/eth [build failed]
+FAIL	github.com/ethereumproject/go-ethereum/eth/downloader [build failed]
+FAIL	github.com/ethereumproject/go-ethereum/eth/fetcher [build failed]
+FAIL	github.com/ethereumproject/go-ethereum/eth/filters [build failed]
+=== RUN   TestSubCloseUnsub
+--- PASS: TestSubCloseUnsub (0.00s)
+=== RUN   TestSub
+--- PASS: TestSub (0.00s)
+=== RUN   TestMuxErrorAfterStop
+--- PASS: TestMuxErrorAfterStop (0.00s)
+=== RUN   TestUnsubscribeUnblockPost
+--- PASS: TestUnsubscribeUnblockPost (0.00s)
+=== RUN   TestSubscribeDuplicateType
+--- PASS: TestSubscribeDuplicateType (0.00s)
+=== RUN   TestMuxConcurrent
+--- PASS: TestMuxConcurrent (0.14s)
+=== RUN   TestFeedPanics
+--- PASS: TestFeedPanics (0.00s)
+=== RUN   TestFeed
+--- PASS: TestFeed (0.56s)
+=== RUN   TestFeedSubscribeSameChannel
+--- PASS: TestFeedSubscribeSameChannel (0.00s)
+=== RUN   TestFeedSubscribeBlockedPost
+--- PASS: TestFeedSubscribeBlockedPost (0.02s)
+=== RUN   TestFeedUnsubscribeBlockedPost
+--- PASS: TestFeedUnsubscribeBlockedPost (0.04s)
+=== RUN   TestFeedUnsubscribeSentChan
+--- PASS: TestFeedUnsubscribeSentChan (0.00s)
+=== RUN   TestFeedUnsubscribeFromInbox
+--- PASS: TestFeedUnsubscribeFromInbox (0.00s)
+=== RUN   ExampleTypeMux
+--- PASS: ExampleTypeMux (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/event	(cached)
+=== RUN   TestFilters
+--- PASS: TestFilters (0.10s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/event/filter	(cached)
+=== RUN   TestCompleteKeywords
+--- PASS: TestCompleteKeywords (0.00s)
+=== RUN   TestExec
+--- PASS: TestExec (0.00s)
+=== RUN   TestNatto
+--- PASS: TestNatto (0.10s)
+=== RUN   TestBind
+--- PASS: TestBind (0.00s)
+=== RUN   TestLoadScript
+--- PASS: TestLoadScript (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/internal/jsre	(cached)
+=== RUN   TestLoggerFlush
+--- PASS: TestLoggerFlush (0.08s)
+=== RUN   TestLoggerPrintln
+--- PASS: TestLoggerPrintln (0.00s)
+=== RUN   TestLoggerPrintf
+--- PASS: TestLoggerPrintf (0.00s)
+=== RUN   TestMultipleLogSystems
+--- PASS: TestMultipleLogSystems (0.00s)
+=== RUN   TestFileLogSystem
+--- PASS: TestFileLogSystem (0.00s)
+=== RUN   TestNoLogSystem
+--- PASS: TestNoLogSystem (0.00s)
+=== RUN   TestConcurrentAddSystem
+--- PASS: TestConcurrentAddSystem (0.10s)
+=== RUN   TestEnabling
+--- PASS: TestEnabling (0.00s)
+=== RUN   TestRegisterAvailable
+--- PASS: TestRegisterAvailable (0.00s)
+=== RUN   TestRegisterFromContext
+--- PASS: TestRegisterFromContext (0.00s)
+=== RUN   TestRegisterFromContextMany
+--- PASS: TestRegisterFromContextMany (0.00s)
+=== RUN   TestRegisterFromNegativeContext
+--- PASS: TestRegisterFromNegativeContext (0.00s)
+=== RUN   TestRegisterFromNegativeContextMany
+--- PASS: TestRegisterFromNegativeContextMany (0.00s)
+=== RUN   TestRegisterFromWrongContext
+--- PASS: TestRegisterFromWrongContext (0.00s)
+=== RUN   TestAssignDetails
+--- PASS: TestAssignDetails (0.00s)
+=== RUN   TestSend
+--- PASS: TestSend (0.00s)
+	mlog_file_test.go:285: plain ok: [example1] TESTER TESTING MLOG HWpZ sampleAddress sampleId 123
+	mlog_file_test.go:285: kv ok: [example1] TESTER TESTING MLOG session=HWpZ from.udp_address=sampleAddress from.id=sampleId neighbors.bytes_transferred=123
+	mlog_file_test.go:334: json ok: {"component":"example1","event":"tester.testing.mlog","from.id":"sampleId","from.udp_address":"sampleAddress","neighbors.bytes_transferred":123,"session":"HWpZ","ts":"2018-08-02T14:52:19.134527084+03:00"}
+=== RUN   TestFormats
+=== RUN   TestFormats/plain
+=== RUN   TestFormats/kv
+=== RUN   TestFormats/json
+=== RUN   TestFormats/invalid
+--- PASS: TestFormats (0.00s)
+    --- PASS: TestFormats/plain (0.00s)
+    --- PASS: TestFormats/kv (0.00s)
+    --- PASS: TestFormats/json (0.00s)
+    --- PASS: TestFormats/invalid (0.00s)
+=== RUN   TestInit
+--- PASS: TestInit (0.00s)
+=== RUN   TestDocumentation
+--- PASS: TestDocumentation (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/logger	(cached)
+=== RUN   TestShortHostname
+--- PASS: TestShortHostname (0.00s)
+=== RUN   TestInfo
+--- PASS: TestInfo (0.00s)
+=== RUN   TestInfoDepth
+--- PASS: TestInfoDepth (0.00s)
+=== RUN   TestCopyStandardLogToPanic
+--- PASS: TestCopyStandardLogToPanic (0.00s)
+=== RUN   TestStandardLog
+I0802 14:52:20.414393 glog_test.go:197] test
+--- PASS: TestStandardLog (0.00s)
+=== RUN   TestHeader1ErrorLog
+E0102 15:04:05.067890 logger/glog/glog_test.go:220] test
+--- PASS: TestHeader1ErrorLog (0.00s)
+=== RUN   TestHeader2InfoLog
+--- PASS: TestHeader2InfoLog (0.00s)
+=== RUN   TestError
+E0802 14:52:20.414569 logger/glog/glog_test.go:268] test
+--- PASS: TestError (0.00s)
+=== RUN   TestWarningLogging
+--- PASS: TestWarningLogging (0.00s)
+=== RUN   TestWarningDisplay
+[2m2018-08-02 14:52:20[0m test
+--- PASS: TestWarningDisplay (0.00s)
+=== RUN   TestErrorDisplay
+[2m2018-08-02 14:52:20[0m [31m[ERR ][0m test
+--- PASS: TestErrorDisplay (0.00s)
+=== RUN   TestV
+--- PASS: TestV (0.00s)
+=== RUN   TestD
+[2m2018-08-02 14:52:20[0m test
+--- PASS: TestD (0.00s)
+=== RUN   TestVmoduleOn
+--- PASS: TestVmoduleOn (0.00s)
+=== RUN   TestVmoduleOff
+--- PASS: TestVmoduleOff (0.00s)
+=== RUN   TestCompileModulePattern
+--- PASS: TestCompileModulePattern (0.00s)
+=== RUN   TestVmoduleGlob
+--- PASS: TestVmoduleGlob (0.00s)
+=== RUN   TestRollover
+--- PASS: TestRollover (1.00s)
+=== RUN   TestLogBacktraceAt
+--- PASS: TestLogBacktraceAt (0.00s)
+=== RUN   TestExtractTimestamp
+=== RUN   TestExtractTimestamp/valid_INFO
+=== RUN   TestExtractTimestamp/valid_WARNIG
+=== RUN   TestExtractTimestamp/valid_gzipped
+=== RUN   TestExtractTimestamp/extra_long_filename
+=== RUN   TestExtractTimestamp/too_short_filename
+=== RUN   TestExtractTimestamp/no_preffix
+--- PASS: TestExtractTimestamp (0.00s)
+    --- PASS: TestExtractTimestamp/valid_INFO (0.00s)
+    --- PASS: TestExtractTimestamp/valid_WARNIG (0.00s)
+    --- PASS: TestExtractTimestamp/valid_gzipped (0.00s)
+    --- PASS: TestExtractTimestamp/extra_long_filename (0.00s)
+    --- PASS: TestExtractTimestamp/too_short_filename (0.00s)
+    --- PASS: TestExtractTimestamp/no_preffix (0.00s)
+=== RUN   TestShouldRotate
+=== RUN   TestShouldRotate/empty_log_no_rotation
+=== RUN   TestShouldRotate/empty_log_with_hourly_rotation
+=== RUN   TestShouldRotate/empty_log_with_size_rotation
+=== RUN   TestShouldRotate/log_with_hourly_rotation_after_less_than_hour
+=== RUN   TestShouldRotate/log_with_hourly_rotation_after_more_than_hour
+=== RUN   TestShouldRotate/log_with_size_rotation_below_MinSize
+=== RUN   TestShouldRotate/log_with_size_rotation_between_MinSize_and_MaxSize
+=== RUN   TestShouldRotate/log_with_size_rotation_above_MaxSize
+=== RUN   TestShouldRotate/log_with_daily_rotation_after_less_than_day
+=== RUN   TestShouldRotate/log_with_daily_rotation_after_more_than_day
+=== RUN   TestShouldRotate/log_with_weekly_rotation_after_less_than_week
+=== RUN   TestShouldRotate/log_with_weekly_rotation_after_more_than_week
+=== RUN   TestShouldRotate/log_with_monthly_rotation_after_less_than_month
+=== RUN   TestShouldRotate/log_with_monthly_rotation_after_more_than_month
+--- PASS: TestShouldRotate (0.00s)
+    --- PASS: TestShouldRotate/empty_log_no_rotation (0.00s)
+    --- PASS: TestShouldRotate/empty_log_with_hourly_rotation (0.00s)
+    --- PASS: TestShouldRotate/empty_log_with_size_rotation (0.00s)
+    --- PASS: TestShouldRotate/log_with_hourly_rotation_after_less_than_hour (0.00s)
+    --- PASS: TestShouldRotate/log_with_hourly_rotation_after_more_than_hour (0.00s)
+    --- PASS: TestShouldRotate/log_with_size_rotation_below_MinSize (0.00s)
+    --- PASS: TestShouldRotate/log_with_size_rotation_between_MinSize_and_MaxSize (0.00s)
+    --- PASS: TestShouldRotate/log_with_size_rotation_above_MaxSize (0.00s)
+    --- PASS: TestShouldRotate/log_with_daily_rotation_after_less_than_day (0.00s)
+    --- PASS: TestShouldRotate/log_with_daily_rotation_after_more_than_day (0.00s)
+    --- PASS: TestShouldRotate/log_with_weekly_rotation_after_less_than_week (0.00s)
+    --- PASS: TestShouldRotate/log_with_weekly_rotation_after_more_than_week (0.00s)
+    --- PASS: TestShouldRotate/log_with_monthly_rotation_after_less_than_month (0.00s)
+    --- PASS: TestShouldRotate/log_with_monthly_rotation_after_more_than_month (0.00s)
+=== RUN   TestGzipFile
+--- PASS: TestGzipFile (0.00s)
+=== RUN   TestRotateOldFiles
+=== RUN   TestRotateOldFiles/no_limits
+=== RUN   TestRotateOldFiles/no_limits_with_compression
+=== RUN   TestRotateOldFiles/with_age_limit
+=== RUN   TestRotateOldFiles/with_size_limit
+=== RUN   TestRotateOldFiles/with_both_limits
+=== RUN   TestRotateOldFiles/with_age_limit_and_compression
+=== RUN   TestRotateOldFiles/with_size_limit_and_compression
+=== RUN   TestRotateOldFiles/with_both_limits_and_compression
+--- PASS: TestRotateOldFiles (0.09s)
+    --- PASS: TestRotateOldFiles/no_limits (0.01s)
+    --- PASS: TestRotateOldFiles/no_limits_with_compression (0.01s)
+    --- PASS: TestRotateOldFiles/with_age_limit (0.00s)
+    --- PASS: TestRotateOldFiles/with_size_limit (0.03s)
+    --- PASS: TestRotateOldFiles/with_both_limits (0.01s)
+    --- PASS: TestRotateOldFiles/with_age_limit_and_compression (0.01s)
+    --- PASS: TestRotateOldFiles/with_size_limit_and_compression (0.01s)
+    --- PASS: TestRotateOldFiles/with_both_limits_and_compression (0.01s)
+=== RUN   TestParseInterval
+=== RUN   TestParseInterval/never
+=== RUN   TestParseInterval/NeVeR
+=== RUN   TestParseInterval/daily
+=== RUN   TestParseInterval/Daily
+=== RUN   TestParseInterval/weekly
+=== RUN   TestParseInterval/weekLY
+=== RUN   TestParseInterval/monthly
+=== RUN   TestParseInterval/mONThLy
+=== RUN   TestParseInterval/invalid
+=== RUN   TestParseInterval/daily_weekly
+=== RUN   TestParseInterval/none
+--- PASS: TestParseInterval (0.00s)
+    --- PASS: TestParseInterval/never (0.00s)
+    --- PASS: TestParseInterval/NeVeR (0.00s)
+    --- PASS: TestParseInterval/daily (0.00s)
+    --- PASS: TestParseInterval/Daily (0.00s)
+    --- PASS: TestParseInterval/weekly (0.00s)
+    --- PASS: TestParseInterval/weekLY (0.00s)
+    --- PASS: TestParseInterval/monthly (0.00s)
+    --- PASS: TestParseInterval/mONThLy (0.00s)
+    --- PASS: TestParseInterval/invalid (0.00s)
+    --- PASS: TestParseInterval/daily_weekly (0.00s)
+    --- PASS: TestParseInterval/none (0.00s)
+=== RUN   TestLongRunningRotateOld
+--- PASS: TestLongRunningRotateOld (2.59s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/logger/glog	(cached)
+=== RUN   TestCounterClear
+--- PASS: TestCounterClear (0.00s)
+=== RUN   TestCounterDec1
+--- PASS: TestCounterDec1 (0.00s)
+=== RUN   TestCounterDec2
+--- PASS: TestCounterDec2 (0.00s)
+=== RUN   TestCounterInc1
+--- PASS: TestCounterInc1 (0.00s)
+=== RUN   TestCounterInc2
+--- PASS: TestCounterInc2 (0.00s)
+=== RUN   TestCounterSnapshot
+--- PASS: TestCounterSnapshot (0.00s)
+=== RUN   TestCounterZero
+--- PASS: TestCounterZero (0.00s)
+=== RUN   TestGetOrRegisterCounter
+--- PASS: TestGetOrRegisterCounter (0.00s)
+=== RUN   TestDebugGCStatsBlocking
+--- PASS: TestDebugGCStatsBlocking (0.01s)
+	debug_test.go:30: i++ during debug.ReadGCStats: 0
+	debug_test.go:33: 19.346µs
+	debug_test.go:35: i++ during time.Sleep: 1106467
+=== RUN   TestEWMA1
+--- PASS: TestEWMA1 (0.00s)
+=== RUN   TestEWMA5
+--- PASS: TestEWMA5 (0.00s)
+=== RUN   TestEWMA15
+--- PASS: TestEWMA15 (0.00s)
+=== RUN   TestGaugeFloat64
+--- PASS: TestGaugeFloat64 (0.00s)
+=== RUN   TestGaugeFloat64Snapshot
+--- PASS: TestGaugeFloat64Snapshot (0.00s)
+=== RUN   TestGetOrRegisterGaugeFloat64
+--- PASS: TestGetOrRegisterGaugeFloat64 (0.00s)
+	gauge_float64_test.go:34: registry: &{map[foo:0xc4200925d0] {0 0}}
+=== RUN   TestFunctionalGaugeFloat64
+--- PASS: TestFunctionalGaugeFloat64 (0.00s)
+=== RUN   TestGetOrRegisterFunctionalGaugeFloat64
+--- PASS: TestGetOrRegisterFunctionalGaugeFloat64 (0.00s)
+=== RUN   TestGauge
+--- PASS: TestGauge (0.00s)
+=== RUN   TestGaugeSnapshot
+--- PASS: TestGaugeSnapshot (0.00s)
+=== RUN   TestGetOrRegisterGauge
+--- PASS: TestGetOrRegisterGauge (0.00s)
+=== RUN   TestFunctionalGauge
+--- PASS: TestFunctionalGauge (0.00s)
+=== RUN   TestGetOrRegisterFunctionalGauge
+--- PASS: TestGetOrRegisterFunctionalGauge (0.00s)
+=== RUN   TestGetOrRegisterHistogram
+--- PASS: TestGetOrRegisterHistogram (0.00s)
+=== RUN   TestHistogram10000
+--- PASS: TestHistogram10000 (0.00s)
+=== RUN   TestHistogramEmpty
+--- PASS: TestHistogramEmpty (0.00s)
+=== RUN   TestHistogramSnapshot
+--- PASS: TestHistogramSnapshot (0.00s)
+=== RUN   TestRegistryMarshallJSON
+--- PASS: TestRegistryMarshallJSON (0.00s)
+=== RUN   TestRegistryWriteJSONOnce
+--- PASS: TestRegistryWriteJSONOnce (0.00s)
+=== RUN   TestGetOrRegisterMeter
+--- PASS: TestGetOrRegisterMeter (0.00s)
+=== RUN   TestMeterDecay
+--- PASS: TestMeterDecay (0.11s)
+=== RUN   TestMeterNonzero
+--- PASS: TestMeterNonzero (0.00s)
+=== RUN   TestMeterStop
+--- PASS: TestMeterStop (0.00s)
+=== RUN   TestMeterSnapshot
+--- PASS: TestMeterSnapshot (0.00s)
+=== RUN   TestMeterZero
+--- PASS: TestMeterZero (0.00s)
+=== RUN   TestRegistry
+--- PASS: TestRegistry (0.00s)
+=== RUN   TestRegistryDuplicate
+--- PASS: TestRegistryDuplicate (0.00s)
+=== RUN   TestRegistryGet
+--- PASS: TestRegistryGet (0.00s)
+=== RUN   TestRegistryGetOrRegister
+--- PASS: TestRegistryGetOrRegister (0.00s)
+=== RUN   TestRegistryGetOrRegisterWithLazyInstantiation
+--- PASS: TestRegistryGetOrRegisterWithLazyInstantiation (0.00s)
+=== RUN   TestRegistryUnregister
+--- PASS: TestRegistryUnregister (0.00s)
+=== RUN   TestPrefixedChildRegistryGetOrRegister
+--- PASS: TestPrefixedChildRegistryGetOrRegister (0.00s)
+=== RUN   TestPrefixedRegistryGetOrRegister
+--- PASS: TestPrefixedRegistryGetOrRegister (0.00s)
+=== RUN   TestPrefixedRegistryRegister
+--- PASS: TestPrefixedRegistryRegister (0.00s)
+=== RUN   TestPrefixedRegistryUnregister
+--- PASS: TestPrefixedRegistryUnregister (0.00s)
+=== RUN   TestPrefixedRegistryGet
+--- PASS: TestPrefixedRegistryGet (0.00s)
+=== RUN   TestPrefixedChildRegistryGet
+--- PASS: TestPrefixedChildRegistryGet (0.00s)
+=== RUN   TestChildPrefixedRegistryRegister
+--- PASS: TestChildPrefixedRegistryRegister (0.00s)
+=== RUN   TestChildPrefixedRegistryOfChildRegister
+--- PASS: TestChildPrefixedRegistryOfChildRegister (0.00s)
+=== RUN   TestWalkRegistries
+--- PASS: TestWalkRegistries (0.00s)
+=== RUN   TestResettingTimer
+--- PASS: TestResettingTimer (0.00s)
+=== RUN   TestResettingTimerWithFivePercentiles
+--- PASS: TestResettingTimerWithFivePercentiles (0.00s)
+=== RUN   TestRuntimeMemStats
+--- PASS: TestRuntimeMemStats (0.33s)
+=== RUN   TestRuntimeMemStatsNumThread
+--- PASS: TestRuntimeMemStatsNumThread (0.00s)
+=== RUN   TestRuntimeMemStatsBlocking
+--- PASS: TestRuntimeMemStatsBlocking (0.00s)
+	runtime_test.go:70: i++ during runtime.ReadMemStats: 0
+	runtime_test.go:73: 16.977µs
+	runtime_test.go:75: i++ during time.Sleep: 10072
+=== RUN   TestExpDecaySample10
+--- PASS: TestExpDecaySample10 (0.00s)
+=== RUN   TestExpDecaySample100
+--- PASS: TestExpDecaySample100 (0.00s)
+=== RUN   TestExpDecaySample1000
+--- PASS: TestExpDecaySample1000 (0.00s)
+=== RUN   TestExpDecaySampleNanosecondRegression
+--- PASS: TestExpDecaySampleNanosecondRegression (0.01s)
+=== RUN   TestExpDecaySampleRescale
+--- PASS: TestExpDecaySampleRescale (0.00s)
+=== RUN   TestExpDecaySampleSnapshot
+--- PASS: TestExpDecaySampleSnapshot (0.00s)
+=== RUN   TestExpDecaySampleStatistics
+--- PASS: TestExpDecaySampleStatistics (0.01s)
+=== RUN   TestUniformSample
+--- PASS: TestUniformSample (0.00s)
+=== RUN   TestUniformSampleIncludesTail
+--- PASS: TestUniformSampleIncludesTail (0.00s)
+=== RUN   TestUniformSampleSnapshot
+--- PASS: TestUniformSampleSnapshot (0.00s)
+=== RUN   TestUniformSampleStatistics
+--- PASS: TestUniformSampleStatistics (0.00s)
+=== RUN   TestUniformSampleConcurrentUpdateCount
+--- PASS: TestUniformSampleConcurrentUpdateCount (5.29s)
+=== RUN   TestGetOrRegisterTimer
+--- PASS: TestGetOrRegisterTimer (0.00s)
+=== RUN   TestTimerExtremes
+--- PASS: TestTimerExtremes (0.00s)
+=== RUN   TestTimerStop
+--- PASS: TestTimerStop (0.00s)
+=== RUN   TestTimerFunc
+--- PASS: TestTimerFunc (0.05s)
+=== RUN   TestTimerZero
+--- PASS: TestTimerZero (0.00s)
+=== RUN   TestMetricsSorting
+--- PASS: TestMetricsSorting (0.00s)
+=== RUN   ExampleGetOrRegisterGauge
+--- PASS: ExampleGetOrRegisterGauge (0.00s)
+=== RUN   Example
+--- PASS: Example (0.01s)
+=== RUN   ExampleGetOrRegisterTimer
+--- PASS: ExampleGetOrRegisterTimer (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/metrics	(cached)
+=== RUN   TestDatadirCreation
+--- PASS: TestDatadirCreation (0.00s)
+=== RUN   TestIPCPathResolution
+--- PASS: TestIPCPathResolution (0.00s)
+=== RUN   TestNodeKeyPersistency
+--- PASS: TestNodeKeyPersistency (0.00s)
+=== RUN   TestNodeLifeCycle
+--- PASS: TestNodeLifeCycle (0.07s)
+=== RUN   TestNodeUsedDataDir
+--- PASS: TestNodeUsedDataDir (0.00s)
+=== RUN   TestServiceRegistry
+--- PASS: TestServiceRegistry (0.01s)
+=== RUN   TestServiceLifeCycle
+--- PASS: TestServiceLifeCycle (0.00s)
+=== RUN   TestServiceRestarts
+--- PASS: TestServiceRestarts (0.01s)
+=== RUN   TestServiceConstructionAbortion
+--- PASS: TestServiceConstructionAbortion (0.01s)
+=== RUN   TestServiceStartupAbortion
+--- PASS: TestServiceStartupAbortion (0.32s)
+=== RUN   TestServiceTerminationGuarantee
+--- PASS: TestServiceTerminationGuarantee (0.42s)
+=== RUN   TestServiceRetrieval
+--- PASS: TestServiceRetrieval (0.00s)
+=== RUN   TestProtocolGather
+--- PASS: TestProtocolGather (0.00s)
+=== RUN   TestAPIGather
+--- PASS: TestAPIGather (0.00s)
+=== RUN   TestContextDatabases
+--- PASS: TestContextDatabases (0.00s)
+=== RUN   TestContextServices
+--- PASS: TestContextServices (0.01s)
+=== RUN   ExampleUsage
+--- PASS: ExampleUsage (0.01s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/node	(cached)
+=== RUN   TestDialStateDynDial
+--- PASS: TestDialStateDynDial (0.00s)
+=== RUN   TestDialStateDynDialFromTable
+--- PASS: TestDialStateDynDialFromTable (0.00s)
+=== RUN   TestDialStateStaticDial
+--- PASS: TestDialStateStaticDial (0.00s)
+=== RUN   TestDialStateCache
+--- PASS: TestDialStateCache (0.00s)
+=== RUN   TestDialResolve
+--- PASS: TestDialResolve (0.00s)
+=== RUN   TestMsgPipeUnblockWrite
+--- PASS: TestMsgPipeUnblockWrite (0.00s)
+=== RUN   TestMsgPipeConcurrentClose
+--- PASS: TestMsgPipeConcurrentClose (0.00s)
+=== RUN   TestEOFSignal
+--- PASS: TestEOFSignal (0.00s)
+=== RUN   TestPeerProtoReadMsg
+--- PASS: TestPeerProtoReadMsg (0.00s)
+=== RUN   TestPeerProtoEncodeMsg
+--- PASS: TestPeerProtoEncodeMsg (0.00s)
+=== RUN   TestPeerPing
+--- PASS: TestPeerPing (0.00s)
+=== RUN   TestPeerDisconnect
+--- PASS: TestPeerDisconnect (0.00s)
+=== RUN   TestPeerDisconnectRace
+--- PASS: TestPeerDisconnectRace (0.15s)
+=== RUN   TestNewPeer
+--- PASS: TestNewPeer (0.00s)
+=== RUN   TestMatchProtocols
+--- PASS: TestMatchProtocols (0.00s)
+=== RUN   TestSharedSecret
+--- PASS: TestSharedSecret (0.00s)
+	rlpx_test.go:55: Secret:
+		32 4e961b2830c0394a430705778bee080af98f2560a16de0c57da631b7be63e271
+		32 4e961b2830c0394a430705778bee080af98f2560a16de0c57da631b7be63e271
+=== RUN   TestEncHandshake
+--- PASS: TestEncHandshake (0.17s)
+	rlpx_test.go:67: (without token) 1 6.37924ms
+	rlpx_test.go:67: (without token) 2 10.562166ms
+	rlpx_test.go:67: (without token) 3 10.4791ms
+	rlpx_test.go:67: (without token) 4 5.71875ms
+	rlpx_test.go:67: (without token) 5 5.463836ms
+	rlpx_test.go:67: (without token) 6 9.661673ms
+	rlpx_test.go:67: (without token) 7 15.150446ms
+	rlpx_test.go:67: (without token) 8 24.05238ms
+	rlpx_test.go:67: (without token) 9 5.690204ms
+	rlpx_test.go:67: (without token) 10 9.174743ms
+	rlpx_test.go:76: (with token) 1 5.692053ms
+	rlpx_test.go:76: (with token) 2 5.336261ms
+	rlpx_test.go:76: (with token) 3 5.722224ms
+	rlpx_test.go:76: (with token) 4 11.209062ms
+	rlpx_test.go:76: (with token) 5 5.666721ms
+	rlpx_test.go:76: (with token) 6 5.3423ms
+	rlpx_test.go:76: (with token) 7 5.502441ms
+	rlpx_test.go:76: (with token) 8 5.576506ms
+	rlpx_test.go:76: (with token) 9 12.026491ms
+	rlpx_test.go:76: (with token) 10 5.46885ms
+=== RUN   TestProtocolHandshake
+--- PASS: TestProtocolHandshake (0.02s)
+=== RUN   TestProtocolHandshakeErrors
+--- PASS: TestProtocolHandshakeErrors (0.00s)
+=== RUN   TestRLPXFrameFake
+--- PASS: TestRLPXFrameFake (0.00s)
+=== RUN   TestRLPXFrameRW
+--- PASS: TestRLPXFrameRW (0.00s)
+=== RUN   TestHandshakeForwardCompatibility
+--- PASS: TestHandshakeForwardCompatibility (0.01s)
+=== RUN   TestServerListen
+[2m2018-08-02 14:52:29[0m Starting server...
+--- PASS: TestServerListen (0.00s)
+=== RUN   TestServerDial
+[2m2018-08-02 14:52:29[0m Starting server...
+--- PASS: TestServerDial (0.00s)
+=== RUN   TestServerTaskScheduling
+--- PASS: TestServerTaskScheduling (0.00s)
+=== RUN   TestServerManyTasks
+--- PASS: TestServerManyTasks (0.00s)
+=== RUN   TestServerAtCap
+[2m2018-08-02 14:52:29[0m Starting server...
+--- PASS: TestServerAtCap (0.00s)
+=== RUN   TestServerSetupConn
+[2m2018-08-02 14:52:29[0m Starting server...
+[2m2018-08-02 14:52:29[0m Starting server...
+[2m2018-08-02 14:52:29[0m Starting server...
+[2m2018-08-02 14:52:29[0m Starting server...
+[2m2018-08-02 14:52:29[0m Starting server...
+[2m2018-08-02 14:52:29[0m Starting server...
+--- PASS: TestServerSetupConn (0.00s)
+=== RUN   ExampleMsgPipe
+--- PASS: ExampleMsgPipe (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/p2p	(cached)
+=== RUN   TestNodeDBKeys
+--- PASS: TestNodeDBKeys (0.00s)
+=== RUN   TestNodeDBInt64
+--- PASS: TestNodeDBInt64 (0.00s)
+=== RUN   TestNodeDBFetchStore
+--- PASS: TestNodeDBFetchStore (0.00s)
+=== RUN   TestNodeDBSeedQuery
+--- PASS: TestNodeDBSeedQuery (0.00s)
+=== RUN   TestNodeDBPersistency
+--- PASS: TestNodeDBPersistency (0.01s)
+=== RUN   TestNodeDBExpiration
+--- PASS: TestNodeDBExpiration (0.00s)
+=== RUN   TestNodeDBSelfExpiration
+--- PASS: TestNodeDBSelfExpiration (0.00s)
+=== RUN   TestClosest
+--- PASS: TestClosest (0.00s)
+=== RUN   TestDistcmp
+--- PASS: TestDistcmp (0.05s)
+=== RUN   TestDistcmpEqual
+--- PASS: TestDistcmpEqual (0.00s)
+=== RUN   TestLogdist
+--- PASS: TestLogdist (0.04s)
+=== RUN   TestLogdistEqual
+--- PASS: TestLogdistEqual (0.00s)
+=== RUN   TestParseNode
+--- PASS: TestParseNode (0.00s)
+=== RUN   TestNodeString
+--- PASS: TestNodeString (0.00s)
+=== RUN   TestHexID
+--- PASS: TestHexID (0.00s)
+=== RUN   TestNodeID_recover
+--- PASS: TestNodeID_recover (0.00s)
+=== RUN   TestNodeID_pubkeyBad
+--- PASS: TestNodeID_pubkeyBad (0.00s)
+=== RUN   TestBucket_bumpNoDuplicates
+=== PAUSE TestBucket_bumpNoDuplicates
+=== RUN   TestTable_IPLimit
+--- PASS: TestTable_IPLimit (0.01s)
+=== RUN   TestTable_BucketIPLimit
+--- PASS: TestTable_BucketIPLimit (0.00s)
+=== RUN   TestHashAtDistance
+--- PASS: TestHashAtDistance (0.02s)
+=== RUN   TestTable_ReadRandomNodesGetAll
+--- PASS: TestTable_ReadRandomNodesGetAll (1.32s)
+=== RUN   TestTable_Lookup
+--- PASS: TestTable_Lookup (0.03s)
+	table_test.go:288: results:
+=== RUN   TestIsPacketTooBig
+--- PASS: TestIsPacketTooBig (0.00s)
+=== RUN   TestUDP_packetErrors
+--- PASS: TestUDP_packetErrors (0.01s)
+=== RUN   TestUDP_pingTimeout
+=== PAUSE TestUDP_pingTimeout
+=== RUN   TestUDP_responseTimeouts
+=== PAUSE TestUDP_responseTimeouts
+=== RUN   TestUDP_findnodeTimeout
+=== PAUSE TestUDP_findnodeTimeout
+=== RUN   TestUDP_findnode
+--- PASS: TestUDP_findnode (0.00s)
+=== RUN   TestUDP_findnodeMultiReply
+--- PASS: TestUDP_findnodeMultiReply (0.51s)
+=== RUN   TestUDP_successfulPing
+--- PASS: TestUDP_successfulPing (0.01s)
+=== RUN   TestForwardCompatibility
+--- PASS: TestForwardCompatibility (0.00s)
+=== RUN   TestIPBetween
+--- PASS: TestIPBetween (0.00s)
+=== RUN   TestIsReserved
+--- PASS: TestIsReserved (0.00s)
+=== CONT  TestBucket_bumpNoDuplicates
+=== CONT  TestUDP_findnodeTimeout
+=== CONT  TestUDP_pingTimeout
+=== CONT  TestUDP_responseTimeouts
+--- PASS: TestBucket_bumpNoDuplicates (0.25s)
+--- PASS: TestUDP_pingTimeout (0.51s)
+--- PASS: TestUDP_findnodeTimeout (0.51s)
+--- PASS: TestUDP_responseTimeouts (3.53s)
+=== RUN   ExampleNewNode
+--- PASS: ExampleNewNode (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/p2p/discover	(cached)
+=== RUN   TestDistinctNetSet
+--- PASS: TestDistinctNetSet (0.00s)
+	net_test.go:63: Add(127.0.0.1): {127.0.0.0×1}
+	net_test.go:63: Add(127.0.0.2): {127.0.0.0×2}
+	net_test.go:63: Add(127.0.0.3): {127.0.0.0×2}
+	net_test.go:63: Add(127.32.0.1): {127.0.0.0×2 127.32.0.0×1}
+	net_test.go:63: Add(127.32.0.2): {127.0.0.0×2 127.32.0.0×2}
+	net_test.go:63: Add(127.32.0.3): {127.0.0.0×2 127.32.0.0×2}
+	net_test.go:63: Add(127.33.0.1): {127.0.0.0×2 127.32.0.0×2}
+	net_test.go:63: Add(127.34.0.1): {127.0.0.0×2 127.32.0.0×2 127.34.0.0×1}
+	net_test.go:63: Add(127.34.0.2): {127.0.0.0×2 127.32.0.0×2 127.34.0.0×2}
+	net_test.go:63: Add(127.34.0.3): {127.0.0.0×2 127.32.0.0×2 127.34.0.0×2}
+	net_test.go:63: Remove(127.0.0.1): {127.0.0.0×1 127.32.0.0×2 127.34.0.0×2}
+	net_test.go:63: Add(127.0.0.3): {127.0.0.0×2 127.32.0.0×2 127.34.0.0×2}
+	net_test.go:63: Add(127.0.0.3): {127.0.0.0×2 127.32.0.0×2 127.34.0.0×2}
+=== RUN   TestIsLAN
+--- PASS: TestIsLAN (0.00s)
+=== RUN   TestCheckRelayIP
+--- PASS: TestCheckRelayIP (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/p2p/distip	(cached)
+=== RUN   TestAutoDiscRace
+--- PASS: TestAutoDiscRace (0.51s)
+=== RUN   TestUPNP_DDWRT
+--- PASS: TestUPNP_DDWRT (2.10s)
+	natupnp_test.go:201: HTTPU request M-SEARCH *
+	natupnp_test.go:201: HTTPU request M-SEARCH *
+	natupnp_test.go:201: HTTPU request M-SEARCH *
+	natupnp_test.go:201: HTTPU request M-SEARCH *
+	natupnp_test.go:201: HTTPU request M-SEARCH *
+	natupnp_test.go:201: HTTPU request M-SEARCH *
+	natupnp_test.go:201: HTTPU request M-SEARCH *
+	natupnp_test.go:201: HTTPU request M-SEARCH *
+	natupnp_test.go:214: HTTP request "GET /InternetGatewayDevice.xml" --> 200
+	natupnp_test.go:214: HTTP request "POST /control?WANIPConnection" --> 200
+PASS
+ok  	github.com/ethereumproject/go-ethereum/p2p/nat	(cached)
+=== RUN   TestConfigErrorProperties
+--- PASS: TestConfigErrorProperties (0.00s)
+=== RUN   TestChainConfig_IsHomestead
+--- PASS: TestChainConfig_IsHomestead (0.00s)
+=== RUN   TestChainConfig_IsDiehard
+--- PASS: TestChainConfig_IsDiehard (0.00s)
+=== RUN   TestChainConfig_IsExplosion
+--- PASS: TestChainConfig_IsExplosion (0.00s)
+=== RUN   TestChainConfig_IsByzantium
+--- PASS: TestChainConfig_IsByzantium (0.00s)
+=== RUN   TestChainConfig_HasFeature
+--- PASS: TestChainConfig_HasFeature (0.00s)
+=== RUN   TestChainConfig_GetFeature
+--- PASS: TestChainConfig_GetFeature (0.00s)
+=== RUN   TestChainConfig_GetFeature2_EventuallyGetAllPossibleFeatures
+--- PASS: TestChainConfig_GetFeature2_EventuallyGetAllPossibleFeatures (0.00s)
+=== RUN   TestChainConfig_GetFeature3_NeverGetNonexistantFeatures
+--- PASS: TestChainConfig_GetFeature3_NeverGetNonexistantFeatures (0.00s)
+=== RUN   TestChainConfig_GetFeature4_WorkForHighNumbers
+--- PASS: TestChainConfig_GetFeature4_WorkForHighNumbers (0.00s)
+=== RUN   TestChainConfig_GetChainID
+--- PASS: TestChainConfig_GetChainID (0.07s)
+=== RUN   TestChainConfig_GetFeature5_DefaultEIP155
+--- PASS: TestChainConfig_GetFeature5_DefaultEIP155 (0.00s)
+=== RUN   TestChainConfig_GetFeature6_DefaultGasTables
+--- PASS: TestChainConfig_GetFeature6_DefaultGasTables (0.00s)
+=== RUN   TestChainConfig_GetFeature7_DefaultDifficulty
+--- PASS: TestChainConfig_GetFeature7_DefaultDifficulty (0.00s)
+=== RUN   TestChainConfig_SortForks
+--- PASS: TestChainConfig_SortForks (0.00s)
+=== RUN   TestChainConfigGetSet
+--- PASS: TestChainConfigGetSet (0.00s)
+=== RUN   TestChainConfig_GetLastRequiredHashFork
+--- PASS: TestChainConfig_GetLastRequiredHashFork (0.00s)
+=== RUN   TestChainConfig_GetSigner
+--- PASS: TestChainConfig_GetSigner (0.00s)
+=== RUN   TestResolvePath
+=== RUN   TestResolvePath/./a/b/config.csv+.
+=== RUN   TestResolvePath/./a/b/config.csv+
+=== RUN   TestResolvePath/./a/b/config.csv+./a/b/config.json
+=== RUN   TestResolvePath/config.csv+a/b
+=== RUN   TestResolvePath/config.csv+a/b/config.json
+=== RUN   TestResolvePath/test.txt+some/dir/conf.json
+=== RUN   TestResolvePath/test.txt+./some/dir/conf.json
+=== RUN   TestResolvePath/./test.txt+some/dir/conf.json
+=== RUN   TestResolvePath/./test.txt+./some/dir/conf.json
+=== RUN   TestResolvePath/../test.txt+some/dir/conf.json
+=== RUN   TestResolvePath/../test.txt+/some/dir/conf.json
+=== RUN   TestResolvePath/../test.txt+some/dir/.././conf.json
+=== RUN   TestResolvePath/../test.txt+conf.json
+=== RUN   TestResolvePath/../../../../a/b/c/d/test.txt+conf.json
+=== RUN   TestResolvePath/../../../../a/b/c/d/test.txt+a/b/c/d/conf.json
+--- PASS: TestResolvePath (0.00s)
+    --- PASS: TestResolvePath/./a/b/config.csv+. (0.00s)
+    --- PASS: TestResolvePath/./a/b/config.csv+ (0.00s)
+    --- PASS: TestResolvePath/./a/b/config.csv+./a/b/config.json (0.00s)
+    --- PASS: TestResolvePath/config.csv+a/b (0.00s)
+    --- PASS: TestResolvePath/config.csv+a/b/config.json (0.00s)
+    --- PASS: TestResolvePath/test.txt+some/dir/conf.json (0.00s)
+    --- PASS: TestResolvePath/test.txt+./some/dir/conf.json (0.00s)
+    --- PASS: TestResolvePath/./test.txt+some/dir/conf.json (0.00s)
+    --- PASS: TestResolvePath/./test.txt+./some/dir/conf.json (0.00s)
+    --- PASS: TestResolvePath/../test.txt+some/dir/conf.json (0.00s)
+    --- PASS: TestResolvePath/../test.txt+/some/dir/conf.json (0.00s)
+    --- PASS: TestResolvePath/../test.txt+some/dir/.././conf.json (0.00s)
+    --- PASS: TestResolvePath/../test.txt+conf.json (0.00s)
+    --- PASS: TestResolvePath/../../../../a/b/c/d/test.txt+conf.json (0.00s)
+    --- PASS: TestResolvePath/../../../../a/b/c/d/test.txt+a/b/c/d/conf.json (0.00s)
+=== RUN   TestSufficientChainConfig_IsValid
+--- PASS: TestSufficientChainConfig_IsValid (0.00s)
+=== RUN   TestGenesisAllocationError
+--- PASS: TestGenesisAllocationError (0.00s)
+=== RUN   TestDefaultChainConfigurationVariablesExist
+--- PASS: TestDefaultChainConfigurationVariablesExist (0.00s)
+=== RUN   TestChainConfigIntegrationBlockVars
+--- PASS: TestChainConfigIntegrationBlockVars (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/params	(cached)
+=== RUN   TestStreamKind
+--- PASS: TestStreamKind (0.00s)
+=== RUN   TestStreamErrors
+--- PASS: TestStreamErrors (0.00s)
+=== RUN   TestStreamList
+--- PASS: TestStreamList (0.00s)
+=== RUN   TestStreamRaw
+--- PASS: TestStreamRaw (0.00s)
+=== RUN   TestDecodeErrors
+--- PASS: TestDecodeErrors (0.00s)
+=== RUN   TestDecodeWithByteReader
+--- PASS: TestDecodeWithByteReader (0.00s)
+=== RUN   TestDecodeWithNonByteReader
+--- PASS: TestDecodeWithNonByteReader (0.00s)
+=== RUN   TestDecodeStreamReset
+--- PASS: TestDecodeStreamReset (0.00s)
+=== RUN   TestDecodeDecoder
+--- PASS: TestDecodeDecoder (0.00s)
+=== RUN   TestDecoderInByteSlice
+--- PASS: TestDecoderInByteSlice (0.00s)
+=== RUN   TestEncode
+--- PASS: TestEncode (0.00s)
+=== RUN   TestEncodeToBytes
+--- PASS: TestEncodeToBytes (0.00s)
+=== RUN   TestEncodeToReader
+--- PASS: TestEncodeToReader (0.00s)
+=== RUN   TestEncodeToReaderPiecewise
+--- PASS: TestEncodeToReaderPiecewise (0.00s)
+=== RUN   TestEncodeToReaderReturnToPool
+--- PASS: TestEncodeToReaderReturnToPool (0.03s)
+=== RUN   TestCountValues
+--- PASS: TestCountValues (0.00s)
+=== RUN   TestSplitTypes
+--- PASS: TestSplitTypes (0.00s)
+=== RUN   TestSplit
+--- PASS: TestSplit (0.00s)
+=== RUN   TestReadSize
+--- PASS: TestReadSize (0.00s)
+=== RUN   ExampleDecode_structTagTail
+--- PASS: ExampleDecode_structTagTail (0.00s)
+=== RUN   ExampleDecode
+--- PASS: ExampleDecode (0.00s)
+=== RUN   ExampleDecode_structTagNil
+--- PASS: ExampleDecode_structTagNil (0.00s)
+=== RUN   ExampleStream
+--- PASS: ExampleStream (0.00s)
+=== RUN   ExampleEncoder
+--- PASS: ExampleEncoder (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/rlp	(cached)
+=== RUN   TestJSONRequestParsing
+--- PASS: TestJSONRequestParsing (0.00s)
+=== RUN   TestJSONRequestParamsParsing
+--- PASS: TestJSONRequestParamsParsing (0.00s)
+=== RUN   TestNotifications
+--- PASS: TestNotifications (1.00s)
+=== RUN   TestServerRegisterName
+--- PASS: TestServerRegisterName (0.00s)
+=== RUN   TestServerMethodExecution
+--- PASS: TestServerMethodExecution (0.00s)
+=== RUN   TestServerMethodWithCtx
+--- PASS: TestServerMethodWithCtx (0.00s)
+=== RUN   TestNewHexNumber
+--- PASS: TestNewHexNumber (0.00s)
+=== RUN   TestHexNumberUnmarshalJSON
+--- PASS: TestHexNumberUnmarshalJSON (0.00s)
+=== RUN   TestHexNumberMarshalJSON
+--- PASS: TestHexNumberMarshalJSON (0.00s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/rpc	(cached)
+FAIL	github.com/ethereumproject/go-ethereum/tests [build failed]
+=== RUN   TestHexCompact
+--- PASS: TestHexCompact (0.00s)
+=== RUN   TestHexKeybytes
+--- PASS: TestHexKeybytes (0.00s)
+=== RUN   TestIterator
+--- PASS: TestIterator (0.00s)
+=== RUN   TestIteratorLargeData
+--- PASS: TestIteratorLargeData (0.00s)
+=== RUN   TestNodeIteratorCoverage
+--- PASS: TestNodeIteratorCoverage (0.04s)
+=== RUN   TestIteratorSeek
+--- PASS: TestIteratorSeek (0.00s)
+=== RUN   TestDifferenceIterator
+--- PASS: TestDifferenceIterator (0.00s)
+=== RUN   TestUnionIterator
+--- PASS: TestUnionIterator (0.00s)
+=== RUN   TestIteratorNoDups
+--- PASS: TestIteratorNoDups (0.00s)
+=== RUN   TestIteratorContinueAfterErrorDisk
+--- PASS: TestIteratorContinueAfterErrorDisk (0.00s)
+=== RUN   TestIteratorContinueAfterErrorMemonly
+--- PASS: TestIteratorContinueAfterErrorMemonly (0.00s)
+=== RUN   TestIteratorContinueAfterSeekErrorDisk
+--- PASS: TestIteratorContinueAfterSeekErrorDisk (0.00s)
+=== RUN   TestIteratorContinueAfterSeekErrorMemonly
+--- PASS: TestIteratorContinueAfterSeekErrorMemonly (0.00s)
+=== RUN   TestCanUnload
+--- PASS: TestCanUnload (0.00s)
+=== RUN   TestProof
+--- PASS: TestProof (0.25s)
+=== RUN   TestOneElementProof
+--- PASS: TestOneElementProof (0.00s)
+=== RUN   TestBadProof
+--- PASS: TestBadProof (0.37s)
+=== RUN   TestMissingKeyProof
+--- PASS: TestMissingKeyProof (0.00s)
+=== RUN   TestSecureDelete
+--- PASS: TestSecureDelete (0.00s)
+=== RUN   TestSecureGetKey
+--- PASS: TestSecureGetKey (0.00s)
+=== RUN   TestSecureTrieConcurrency
+--- PASS: TestSecureTrieConcurrency (0.46s)
+=== RUN   TestEmptySync
+--- PASS: TestEmptySync (0.00s)
+=== RUN   TestIterativeSyncIndividual
+--- PASS: TestIterativeSyncIndividual (0.10s)
+=== RUN   TestIterativeSyncBatched
+--- PASS: TestIterativeSyncBatched (0.08s)
+=== RUN   TestIterativeDelayedSync
+--- PASS: TestIterativeDelayedSync (0.07s)
+=== RUN   TestIterativeRandomSyncIndividual
+--- PASS: TestIterativeRandomSyncIndividual (0.09s)
+=== RUN   TestIterativeRandomSyncBatched
+--- PASS: TestIterativeRandomSyncBatched (0.07s)
+=== RUN   TestIterativeRandomDelayedSync
+--- PASS: TestIterativeRandomDelayedSync (0.05s)
+=== RUN   TestDuplicateAvoidanceSync
+--- PASS: TestDuplicateAvoidanceSync (0.06s)
+=== RUN   TestIncompleteSync
+--- PASS: TestIncompleteSync (2.44s)
+=== RUN   TestEmptyTrie
+--- PASS: TestEmptyTrie (0.00s)
+=== RUN   TestNull
+--- PASS: TestNull (0.00s)
+=== RUN   TestMissingRoot
+--- PASS: TestMissingRoot (0.00s)
+=== RUN   TestMissingNodeDisk
+--- PASS: TestMissingNodeDisk (0.00s)
+=== RUN   TestMissingNodeMemonly
+--- PASS: TestMissingNodeMemonly (0.00s)
+=== RUN   TestInsert
+--- PASS: TestInsert (0.00s)
+=== RUN   TestGet
+--- PASS: TestGet (0.00s)
+=== RUN   TestDelete
+--- PASS: TestDelete (0.00s)
+=== RUN   TestEmptyValues
+--- PASS: TestEmptyValues (0.00s)
+=== RUN   TestReplication
+--- PASS: TestReplication (0.00s)
+=== RUN   TestLargeValue
+--- PASS: TestLargeValue (0.00s)
+=== RUN   TestCacheUnload
+--- PASS: TestCacheUnload (0.00s)
+=== RUN   TestRandom
+--- PASS: TestRandom (0.04s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/trie	(cached)
+=== RUN   TestEnvelopeOpen
+--- PASS: TestEnvelopeOpen (0.05s)
+=== RUN   TestEnvelopeAnonymousOpenUntargeted
+--- PASS: TestEnvelopeAnonymousOpenUntargeted (0.07s)
+=== RUN   TestEnvelopeAnonymousOpenTargeted
+--- PASS: TestEnvelopeAnonymousOpenTargeted (0.05s)
+=== RUN   TestEnvelopeIdentifiedOpenUntargeted
+--- PASS: TestEnvelopeIdentifiedOpenUntargeted (0.05s)
+=== RUN   TestEnvelopeIdentifiedOpenTargeted
+--- PASS: TestEnvelopeIdentifiedOpenTargeted (0.06s)
+=== RUN   TestFilterTopicsCreation
+--- PASS: TestFilterTopicsCreation (0.00s)
+=== RUN   TestFilterCompare
+--- PASS: TestFilterCompare (0.00s)
+=== RUN   TestMessageSimpleWrap
+--- PASS: TestMessageSimpleWrap (0.05s)
+=== RUN   TestMessageCleartextSignRecover
+--- PASS: TestMessageCleartextSignRecover (0.05s)
+=== RUN   TestMessageAnonymousEncryptDecrypt
+--- PASS: TestMessageAnonymousEncryptDecrypt (0.06s)
+=== RUN   TestMessageFullCrypto
+--- PASS: TestMessageFullCrypto (0.05s)
+=== RUN   TestPeerStatusMessage
+--- PASS: TestPeerStatusMessage (0.00s)
+=== RUN   TestPeerHandshakeFail
+--- PASS: TestPeerHandshakeFail (0.00s)
+=== RUN   TestPeerHandshakeSuccess
+--- PASS: TestPeerHandshakeSuccess (0.10s)
+=== RUN   TestPeerSend
+--- PASS: TestPeerSend (0.60s)
+=== RUN   TestPeerDeliver
+--- PASS: TestPeerDeliver (0.65s)
+=== RUN   TestPeerMessageExpiration
+--- PASS: TestPeerMessageExpiration (3.31s)
+=== RUN   TestTopicCreation
+--- PASS: TestTopicCreation (0.00s)
+=== RUN   TestTopicMatcherCreation
+--- PASS: TestTopicMatcherCreation (0.00s)
+=== RUN   TestTopicMatcher
+--- PASS: TestTopicMatcher (0.00s)
+=== RUN   TestSelfMessage
+--- PASS: TestSelfMessage (0.07s)
+=== RUN   TestDirectMessage
+--- PASS: TestDirectMessage (0.30s)
+=== RUN   TestAnonymousBroadcast
+--- PASS: TestAnonymousBroadcast (0.33s)
+=== RUN   TestIdentifiedBroadcast
+--- PASS: TestIdentifiedBroadcast (0.31s)
+=== RUN   TestMessageExpiration
+--- PASS: TestMessageExpiration (2.65s)
+PASS
+ok  	github.com/ethereumproject/go-ethereum/whisper	(cached)

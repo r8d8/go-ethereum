@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "remotePath": "",
+            "port": 2345,
+            "host": "127.0.0.1",
+            "program": "${workspaceFolder}",
+            "env": {},
+            "args": [
+                "--docker-endpoint",
+                "tcp://localhost:2375",
+                "--docker-noshell",
+                "--client",
+                "go-ethereum_master",
+                "--loglevel",
+                "6",
+                "--smoke"
+            ],
+            "showLog": true
+        }
+    ]
+}

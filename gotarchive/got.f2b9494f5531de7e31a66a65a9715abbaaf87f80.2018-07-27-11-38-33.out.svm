@@ -1,0 +1,65 @@
+# github.com/ethereumproject/go-ethereum/vendor/github.com/ethereumproject/sputnikvm-ffi/go/sputnikvm
+/tmp/go-build408350408/b202/_cgo_main.o:/tmp/go-build/cgo-generated-wrappers:5: undefined reference to `CREATE_ACTION'
+/tmp/go-build408350408/b202/_cgo_main.o:/tmp/go-build/cgo-generated-wrappers:2: undefined reference to `CALL_ACTION'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_print_u256':
+/tmp/go-build/cgo-gcc-prolog:49: undefined reference to `print_u256'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_account_changes_copy_code':
+/tmp/go-build/cgo-gcc-prolog:127: undefined reference to `sputnikvm_account_changes_copy_code'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_account_changes_copy_storage':
+/tmp/go-build/cgo-gcc-prolog:165: undefined reference to `sputnikvm_account_changes_copy_storage'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_account_changes_len':
+/tmp/go-build/cgo-gcc-prolog:183: undefined reference to `sputnikvm_account_changes_len'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_commit_account':
+/tmp/go-build/cgo-gcc-prolog:208: undefined reference to `sputnikvm_commit_account'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_commit_account_code':
+/tmp/go-build/cgo-gcc-prolog:231: undefined reference to `sputnikvm_commit_account_code'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_commit_account_storage':
+/tmp/go-build/cgo-gcc-prolog:253: undefined reference to `sputnikvm_commit_account_storage'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_commit_blockhash':
+/tmp/go-build/cgo-gcc-prolog:273: undefined reference to `sputnikvm_commit_blockhash'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_commit_nonexist':
+/tmp/go-build/cgo-gcc-prolog:293: undefined reference to `sputnikvm_commit_nonexist'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_fire':
+/tmp/go-build/cgo-gcc-prolog:310: undefined reference to `sputnikvm_fire'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_logs_len':
+/tmp/go-build/cgo-gcc-prolog:372: undefined reference to `sputnikvm_logs_len'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_logs_topic':
+/tmp/go-build/cgo-gcc-prolog:391: undefined reference to `sputnikvm_logs_topic'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_custom_eip150':
+/tmp/go-build/cgo-gcc-prolog:409: undefined reference to `sputnikvm_new_custom_eip150'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_custom_eip160':
+/tmp/go-build/cgo-gcc-prolog:427: undefined reference to `sputnikvm_new_custom_eip160'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_custom_frontier':
+/tmp/go-build/cgo-gcc-prolog:445: undefined reference to `sputnikvm_new_custom_frontier'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_custom_homestead':
+/tmp/go-build/cgo-gcc-prolog:463: undefined reference to `sputnikvm_new_custom_homestead'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_eip150':
+/tmp/go-build/cgo-gcc-prolog:481: undefined reference to `sputnikvm_new_eip150'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_eip160':
+/tmp/go-build/cgo-gcc-prolog:499: undefined reference to `sputnikvm_new_eip160'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_frontier':
+/tmp/go-build/cgo-gcc-prolog:517: undefined reference to `sputnikvm_new_frontier'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_homestead':
+/tmp/go-build/cgo-gcc-prolog:535: undefined reference to `sputnikvm_new_homestead'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_morden_eip150':
+/tmp/go-build/cgo-gcc-prolog:553: undefined reference to `sputnikvm_new_morden_eip150'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_morden_eip160':
+/tmp/go-build/cgo-gcc-prolog:571: undefined reference to `sputnikvm_new_morden_eip160'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_morden_frontier':
+/tmp/go-build/cgo-gcc-prolog:589: undefined reference to `sputnikvm_new_morden_frontier'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_new_morden_homestead':
+/tmp/go-build/cgo-gcc-prolog:607: undefined reference to `sputnikvm_new_morden_homestead'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_set_custom_initial_nonce':
+/tmp/go-build/cgo-gcc-prolog:677: undefined reference to `sputnikvm_set_custom_initial_nonce'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_used_gas':
+/tmp/go-build/cgo-gcc-prolog:692: undefined reference to `sputnikvm_used_gas'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_account_changes_copy_info':
+/tmp/go-build/cgo-gcc-prolog:144: undefined reference to `sputnikvm_account_changes_copy_info'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_free':
+/tmp/go-build/cgo-gcc-prolog:324: undefined reference to `sputnikvm_free'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_logs_copy_data':
+/tmp/go-build/cgo-gcc-prolog:341: undefined reference to `sputnikvm_logs_copy_data'
+/tmp/go-build408350408/b202/_x002.o: In function `_cgo_752a795035d4_Cfunc_sputnikvm_logs_copy_info':
+/tmp/go-build/cgo-gcc-prolog:356: undefined reference to `sputnikvm_logs_copy_info'
+collect2: error: ld returned 1 exit status
+FAIL	github.com/ethereumproject/go-ethereum/tests [build failed]
