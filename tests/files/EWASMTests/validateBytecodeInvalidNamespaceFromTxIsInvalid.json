@@ -1,0 +1,56 @@
+{
+    "validateBytecodeInvalidNamespaceFromTxIsInvalid" : {
+        "_info" : {
+            "comment" : "",
+            "filledwith" : "testeth 1.4.0",
+            "lllcversion" : "Version: 0.4.20-develop.2018.1.14+commit.0c20b6da.Darwin.appleclang",
+            "source" : "src/GeneralStateTestsFiller/stEWASMTests/validateBytecodeInvalidNamespaceFromTxIsInvalidFiller.yml",
+            "sourceHash" : "c06b4bd116d8f8edd5ed6b6d5a61d8a08abc83123ce73ce4c5bb6d2cb2f69d3c"
+        },
+        "env" : {
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x020000",
+            "currentGasLimit" : "0x05500000",
+            "currentNumber" : "0x01",
+            "currentTimestamp" : "0x03e8",
+            "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
+        },
+        "post" : {
+            "Byzantium" : [
+                {
+                    "hash" : "0x60f7870ae7c1fb1176a96382cbfe1c1dfc83cb08081728a7396e901a70832a36",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347"
+                }
+            ]
+        },
+        "pre" : {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x174876e800",
+                "code" : "",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x0061736d0100000001090260027f7f0060000002110106666f6f6261720666696e6973680000030201010503010001071102066d656d6f72790200046d61696e00010a0a0108004100410010000b"
+            ],
+            "gasLimit" : [
+                "0x5000001"
+            ],
+            "gasPrice" : "0x01",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "to" : "",
+            "value" : [
+                "0x00"
+            ]
+        }
+    }
+}

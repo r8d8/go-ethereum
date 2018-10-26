@@ -1,0 +1,76 @@
+# Test whether memory grow outputs the size that it grew
+---
+wasmGrowMemory:
+  env:
+    currentCoinbase: 2adc25665018aa1fe0e6bc666dac8fc2697ff9ba
+    currentDifficulty: '0x020000'
+    currentGasLimit: '89128960'
+    currentNumber: '1'
+    currentTimestamp: '1000'
+    previousHash: 5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6
+  pre:
+    a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+      balance: '100000000000'
+      code: ''
+      nonce: '0'
+      storage: {}
+    b94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+      balance: '100000000000'
+      code: |
+        (module
+         (import "ethereum" "storageStore" (func $storageStore (param i32 i32)))
+         (memory 1)
+         (export "memory" (memory 0))
+         (export "main" (func $main))
+         (func $main
+          (local $keyAddress i32)
+          (local $valAddress i32)
+          (set_local $keyAddress (i32.const 0))
+          (set_local $valAddress (i32.const 32))
+          ;; grow the memory by 2 pages, drop the return
+          (drop
+           (grow_memory
+            (i32.const 2)
+           )
+          )
+          ;; store the new memory size
+          (i32.store8
+           (get_local $valAddress)
+           (current_memory)
+          )
+          ;; store memory size 3 at address 0
+          (call $storageStore
+           (get_local $keyAddress)
+           (get_local $valAddress)
+          )
+         )
+        )
+      nonce: ''
+      storage: {}
+  expect:
+    - indexes:
+        data: !!int -1
+        gas:  !!int -1
+        value: !!int -1
+      network:
+        - ALL
+      result:
+        # Balance        SSTORE   TXCOST
+        # 100000000000   - 20000  - 21000   = 99999959000
+        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+          balance: '99999959000'
+        b94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+          storage: {
+            0: '0x0300000000000000000000000000000000000000000000000000000000000000'
+          }
+  transaction:
+    data:
+    - ''
+    gasLimit:
+    - '0x5000001'
+    gasPrice: '0x01'
+    nonce: '0x00'
+    secretKey: 45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8
+    to: 'b94f5374fce5edbc8e2a8697c15331677e6ebf0b'
+    value:
+    - '0'

@@ -1,0 +1,254 @@
+createNonzero:
+  env:
+    currentCoinbase: 2adc25665018aa1fe0e6bc666dac8fc2697ff9ba
+    currentDifficulty: '0x020000'
+    currentGasLimit: '89128960'
+    currentNumber: '1'
+    currentTimestamp: '1000'
+    previousHash: 5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6
+  pre:
+    a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+      balance: '100000000000'
+      code: ''
+      nonce: '0x4'
+      storage: {}
+    # WASM source for compiled code, below:
+    a000000000000000000000000000000000000001:
+      balance: '0'
+      nonce: ''
+      storage: {}
+      code: |
+        (module
+          (import "ethereum" "storageStore" (func $storageStore (param i32 i32)))
+          (memory 1)
+          (data (i32.const 704) "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04")
+          (export "memory" (memory 0))
+          (export "main" (func $main))
+
+          (func $main
+            ;; locals
+            (local $memPointerStorageKey5 i32)
+            (local $memPointerStorageVal5 i32)
+
+            ;; memory
+            (set_local $memPointerStorageKey5 (i32.const 704))
+            (set_local $memPointerStorageVal5 (i32.const 672))
+
+            ;; init
+            (i32.store (get_local $memPointerStorageVal5) (i32.const 0xbeef))
+
+            ;; store it
+            (call $storageStore (get_local $memPointerStorageKey5) (get_local $memPointerStorageVal5))
+          )
+        )
+    # WASM source for compiled code, below:
+    a000000000000000000000000000000000000000:
+      balance: '0'
+      nonce: ''
+      storage: {}
+      code: |
+        (module
+          (import "ethereum" "storageStore" (func $storageStore (param i32 i32)))
+          (import "ethereum" "getCallValue" (func $getCallValue (param i32)))
+          (import "ethereum" "finish" (func $finish (param i32 i32)))
+          (import "ethereum" "getExternalCodeSize" (func $getExternalCodeSize (param i32) (result i32)))
+          (import "ethereum" "externalCodeCopy" (func $externalCodeCopy (param i32 i32 i32 i32)))
+          (memory 1)
+          (data (i32.const 596) "\a0\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\01")
+
+          (data (i32.const 564) "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\03") ;; storage key 3
+          (export "memory" (memory 0))
+          (export "main" (func $main))
+
+          (func $main
+            ;; locals
+            (local $memPointerCallValue i32)
+            (local $memPointerStorageKey4 i32)
+            (local $memPointerReturnData i32)
+            (local $memPointerAddress i32)
+            (local $codeLen i32)
+
+            ;; memory layout
+            (set_local $memPointerCallValue (i32.const 532))
+            (set_local $memPointerStorageKey4 (i32.const 564))
+            (set_local $memPointerAddress (i32.const 596))
+            (set_local $memPointerReturnData (i32.const 384))
+            (set_local $codeLen (i32.const 628))
+
+            (i32.store (get_local $codeLen)
+              (call $getExternalCodeSize
+                (get_local $memPointerAddress)))
+
+            ;; get external code
+            (call $externalCodeCopy
+              (get_local $memPointerAddress)
+              (get_local $memPointerReturnData)
+              (i32.const 0)
+              (i32.load (get_local $codeLen)))
+              
+            ;; get call value
+            ;; result gets stored in pointer loc
+            (call $getCallValue (get_local $memPointerCallValue))
+
+            ;; write it to storage
+            (call $storageStore (get_local $memPointerStorageKey4) (get_local $memPointerCallValue))
+
+            ;; return something
+            (call $finish
+              ;; pointer to read return data
+              (get_local $memPointerReturnData)
+              ;; length of return data
+              (i32.load (get_local $codeLen)))
+            ;;)
+          )
+        )
+    deadbeef00000000000000000000000000000000:
+      balance: '100000000000'
+      nonce: ''
+      storage: {}
+      code: |
+        (module
+          (import "ethereum" "create" (func $create (param i32 i32 i32 i32) (result i32)))
+          (import "ethereum" "storageStore" (func $storageStore (param i32 i32)))
+          (import "ethereum" "call" (func $call (param i64 i32 i32 i32 i32) (result i32)))
+          (import "ethereum" "getExternalCodeSize" (func $getExternalCodeSize (param i32) (result i32)))
+          (import "ethereum" "externalCodeCopy" (func $externalCodeCopy (param i32 i32 i32 i32)))
+          (memory 1)
+          (data (i32.const 389) "\a0\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+          ;; the inner contract to create
+
+          (data (i32.const 0)  "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00") ;; key 0
+          (data (i32.const 32) "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\01") ;; key 1
+          (data (i32.const 64) "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02") ;; key 2
+          (export "memory" (memory 0))
+          (export "main" (func $main))
+
+          (func $main
+            ;; locals
+            (local $codeMemLoc i32)
+            (local $codeLen i32)
+            (local $memPointerStorageKey1 i32)
+            (local $memPointerStorageKey2 i32)
+            (local $memPointerCreateValue i32)
+            (local $memPointerCreateResult i32)
+            (local $memPointerZero i32)
+            (local $memPointerStorageKey3 i32)
+            (local $memPointerCreateReturnVal i32)
+            (local $memPointerAddress i32)
+
+            ;; Location and length of code stored in (data) section above
+            (set_local $codeMemLoc (i32.const 288))
+            (set_local $codeLen (i32.const 256))
+
+            ;; memory layout and pointers
+            (set_local $memPointerStorageKey1 (i32.const 0))
+            (set_local $memPointerStorageKey2 (i32.const 32))
+            (set_local $memPointerCreateValue (i32.const 64))
+            (set_local $memPointerCreateResult (i32.const 96))
+            (set_local $memPointerZero (i32.const 128))
+            (set_local $memPointerStorageKey3 (i32.const 160))
+            (set_local $memPointerCreateReturnVal (i32.const 192))
+            (set_local $memPointerAddress (i32.const 389))
+
+            (i32.store (get_local $codeLen)
+              (call $getExternalCodeSize (get_local $memPointerAddress)))
+              
+            (call $externalCodeCopy
+              (get_local $memPointerAddress)
+              (get_local $codeMemLoc)
+              (i32.const 0)
+              (i32.load (get_local $codeLen)))
+
+            ;; initialize
+            (i32.store (get_local $memPointerZero) (i32.const 0))
+            ;; call create with value transfer 0x1234 = 4660
+            (i32.store (get_local $memPointerCreateValue) (i32.const 0x1234))
+
+            ;; call CREATE and store the return success/failure value
+            (i32.store
+              (get_local $memPointerCreateReturnVal)
+              (call $create
+                ;; value offset
+                (get_local $memPointerCreateValue)
+                ;; data offset
+                (get_local $codeMemLoc)
+                ;; data length
+                (i32.load (get_local $codeLen))
+                ;; result offset (new contract address)
+                (get_local $memPointerCreateResult)
+              )
+            )
+
+            (call $storageStore
+              (get_local $memPointerStorageKey1)
+              (get_local $memPointerCreateReturnVal)
+            )
+
+            ;; store the result (new contract address)
+            (call $storageStore
+              (get_local $memPointerStorageKey2)
+              (get_local $memPointerCreateResult)
+            )
+
+            ;; finally, call the newly-created contract and store the result
+            (call $storageStore
+              (get_local $memPointerStorageKey3)
+              (call $call
+                ;; gas limit
+                (i64.const 200000)
+                ;; addr offset
+                (get_local $memPointerCreateResult)
+                ;; val offset
+                (get_local $memPointerZero)
+                ;; data offset
+                (get_local $memPointerZero)
+                ;; data length
+                (get_local $memPointerZero)
+              )
+            )
+          )
+        )
+  expect:
+    - indexes:
+        data: !!int -1
+        gas: !!int -1
+        value: !!int -1
+      network:
+        - ALL
+      result:
+        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+          balance: '99999843850'
+        deadbeef00000000000000000000000000000000:
+          storage: {
+            # Expect CREATE to return success
+            # $memPointerStorageKey1 = 0
+            0: '0x0000000000000000000000000000000000000000000000000000000000000000',
+            # Expect CREATE result to be new contract address
+            # $memPointerStorageKey2 = 1
+            1: '0xf2048c36a5536fea3bc71d49ed59f2c65c546eea000000000000000000000000',
+            # Result of call, 0 is success
+            2: '0x0000000000000000000000000000000000000000000000000000000000000000',
+            # Nothing should be stored at this key
+            3: '0x0000000000000000000000000000000000000000000000000000000000000000',
+          }
+        # Newly-created contract
+        0xf2048c36a5536fea3bc71d49ed59f2c65c546eea:
+          code: '0x0061736d0100000001090260027f7f0060000002190108657468657265756d0c73746f7261676553746f72650000030201010503010001071102066d656d6f72790200046d61696e00010a1f011d01027f41c005210041a0052101200141effd023602002000200110000b0b27010041c0050b200000000000000000000000000000000000000000000000000000000000000004'
+          storage: {
+            # Expect created contract to store its call value
+            # $memPointerStorageKey4 = 3
+            3: "0x3412000000000000000000000000000000000000000000000000000000000000",
+            # Written by inner, called code
+            4: '0xefbe000000000000000000000000000000000000000000000000000000000000',
+          }
+  transaction:
+    data:
+    - '0x'
+    gasLimit:
+    - '0x6acfc0'
+    gasPrice: '0x01'
+    nonce: '0x04'
+    secretKey: "45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+    to: 'deadbeef00000000000000000000000000000000'
+    value:
+    - '0'

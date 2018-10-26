@@ -1,0 +1,123 @@
+# Test malformed bytecode (bad import from valid namespace) in init on create
+validateBytecodeInvalidImportIsInvalid:
+  env:
+    currentCoinbase: 2adc25665018aa1fe0e6bc666dac8fc2697ff9ba
+    currentDifficulty: '0x020000'
+    currentGasLimit: '89128960'
+    currentNumber: '1'
+    currentTimestamp: '1000'
+    previousHash: 5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6
+  pre:
+    # tx sender
+    a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+      balance: '100000000000'
+      code: ''
+      nonce: ''
+      storage: {}
+    # WASM source for compiled code, below:
+    # (module
+    #   ;; attempt invalid import from valid namespace
+    #   (import "ethereum" "foobar" (func $finish (param i32 i32)))
+    #   (memory 1)
+    #   (export "memory" (memory 0))
+    #   (export "main" (func $main))
+
+    #   (func $main
+    #     (call $finish
+    #       (i32.const 0)
+    #       (i32.const 0)
+    #     )
+    #   )
+    # )
+    # main contract, tx receiver
+    abcdabcdabcdabcdabcdabcdabcdabcdabcdabcd:
+      balance: '100000000000'
+      code: |
+        (module
+          (import "ethereum" "create" (func $create (param i32 i32 i32 i32) (result i32)))
+          (import "ethereum" "storageStore" (func $storageStore (param i32 i32)))
+
+          (memory 1)
+          ;; the inner contract to create
+          ;; see WASM source for compiled code, above
+          (data (i32.const 0) "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00") ;; key1
+          (data (i32.const 64) "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\01") ;; key2 
+          (data (i32.const 256) "\00\61\73\6d\01\00\00\00\01\09\02\60\02\7f\7f\00\60\00\00\02\13\01\08\65\74\68\65\72\65\75\6d\06\66\6f\6f\62\61\72\00\00\03\02\01\01\05\03\01\00\01\07\11\02\06\6d\65\6d\6f\72\79\02\00\04\6d\61\69\6e\00\01\0a\0a\01\08\00\41\00\41\00\10\00\0b") ;; init code
+          (export "memory" (memory 0))
+          (export "main" (func $main))
+
+          (func $main
+            ;; memory layout
+            (local $memStoragekey1 i32)
+            (local $memStorageval1 i32)
+            (local $memStoragekey2 i32)
+            (local $memStorageval2 i32)
+            (local $memValue i32)
+            (local $memCode i32)
+            (local $codeLen i32)
+
+            (set_local $memStoragekey1 (i32.const 0))
+            (set_local $memStorageval1 (i32.const 32))
+            (set_local $memStoragekey2 (i32.const 64))
+            (set_local $memStorageval2 (i32.const 96))
+            (set_local $memValue (i32.const 128))
+            (set_local $memCode (i32.const 256))
+            (set_local $codeLen (i32.const 80))
+
+            ;; we expect this to fail
+            (i32.store
+              (get_local $memStorageval2)
+              (call $create
+                ;; value offset
+                (get_local $memValue)
+                ;; data offset
+                (get_local $memCode)
+                ;; data length
+                (get_local $codeLen)
+                ;; result offset (new contract address)
+                (get_local $memStorageval1)
+              )
+            )
+
+            ;; store the result (new contract address)
+            (call $storageStore
+              (get_local $memStoragekey1)
+              (get_local $memStorageval1)
+            )
+
+            ;; store the result of the CREATE
+            (call $storageStore
+              (get_local $memStoragekey2)
+              (get_local $memStorageval2)
+            )
+          )
+        )
+      nonce: ''
+      storage: {}
+  expect:
+    - indexes:
+        data: !!int -1
+        gas: !!int -1
+        value: !!int -1
+      network:
+        - ALL
+      result:
+        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+          balance: '99917398810'
+        abcdabcdabcdabcdabcdabcdabcdabcdabcdabcd:
+          # expect CREATE to return 1 (failure), and no created contract address
+          storage: {
+            0: '',
+            1: '0x0100000000000000000000000000000000000000000000000000000000000000',
+          }
+  transaction:
+    data: 
+    - ''
+    gasLimit:
+    - '0x5000001'
+    gasPrice: '0x01'
+    nonce: '0x00'
+    secretKey: 45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8
+    to: 'abcdabcdabcdabcdabcdabcdabcdabcdabcdabcd'
+    value:
+    - '0'

@@ -1,0 +1,123 @@
+# Try to create a new contract, and sending a value higher than current balance
+createNotEnoughBalance:
+  env:
+    currentCoinbase: 2adc25665018aa1fe0e6bc666dac8fc2697ff9ba
+    currentDifficulty: '0x020000'
+    currentGasLimit: '89128960'
+    currentNumber: '1'
+    currentTimestamp: '1000'
+    previousHash: 5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6
+  pre:
+    a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+      balance: '100000000000'
+      code: ''
+      nonce: '0x4'
+      storage: {}
+    a000000000000000000000000000000000000001:
+      balance: '100000000000'
+      nonce: ''
+      storage: {}
+      code: |
+        (module
+          (import "ethereum" "storageStore" (func $storageStore (param i32 i32)))
+          (import "ethereum" "getCallValue" (func $getCallValue (param i32)))
+          (memory 1)
+          ;; storage key
+          (data (i32.const 544) "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02") ;; 2
+          (export "memory" (memory 0))
+          (export "main" (func $main))
+
+          (func $main
+            ;; locals
+            (local $memPointerCallValue i32)
+            (local $memPointerStorageKey3 i32)
+
+            ;; memory
+            (set_local $memPointerCallValue (i32.const 512))
+            (set_local $memPointerStorageKey3 (i32.const 544))
+
+            ;; get and write the call value to memory
+            (call $getCallValue (get_local $memPointerCallValue))
+
+            ;; store it
+            (call $storageStore
+              (get_local $memPointerStorageKey3)
+              (get_local $memPointerCallValue)
+            )
+            ;; no return value, we're not setting any code
+          )
+        )
+    deadbeef00000000000000000000000000000000:
+      balance: '0'
+      nonce: ''
+      storage: {}
+      code: |
+        (module
+          (import "ethereum" "create" (func $create (param i32 i32 i32 i32) (result i32)))
+          (import "ethereum" "getExternalCodeSize" (func $getExternalCodeSize (param i32) (result i32)))
+          (import "ethereum" "externalCodeCopy" (func $externalCodeCopy (param i32 i32 i32 i32)))          
+          (memory 1 )
+          (export "memory" (memory 0))
+          (export "main" (func $main))
+          (data (i32.const 0) "\a0\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\01")
+          (data (i32.const 64) "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\17\48\76\e8\00")
+          (func $main
+            (local $codeLen i32)
+            (local $addrOffset i32)
+            (local $codeMemLoc i32)
+            (local $retCode    i32)
+            (local $valOffset  i32)
+            (local $createResult i32)
+
+            (set_local $addrOffset (i32.const 0))
+            (set_local $retCode (i32.const 32))
+            (set_local $valOffset (i32.const 64))
+            (set_local $createResult (i32.const 96))
+            (set_local $codeMemLoc (i32.const 256))
+            
+
+            ;; get external code length
+            (set_local $codeLen
+              (call $getExternalCodeSize (get_local $addrOffset)))
+
+            ;; get external code
+            (call $externalCodeCopy
+              (get_local $addrOffset) ;; address
+              (get_local $codeMemLoc) ;; result
+              (i32.const 0)           ;; code offset
+              (get_local $codeLen))   ;; code length
+              
+            (i32.store (get_local $retCode) ;; store result value
+              (call $create
+                (get_local $valOffset)
+                (get_local $codeMemLoc)
+                (get_local $codeLen)
+                (get_local $createResult)))
+          )
+        )
+  expect:
+    - indexes:
+        data: !!int -1
+        gas: !!int -1
+        value: !!int -1
+      network:
+        - ALL
+      result:
+        # initialBalance - getExternalCodeSize - externalCodeCopy - create - txCost
+        # 100000000000   - 700                 - 718              - 32000  - 21000  = 99999945582
+        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+          balance: '99999945582'
+        deadbeef00000000000000000000000000000000:
+          storage: {
+          }
+  transaction:
+    data:
+    - '0x'
+    gasLimit:
+    - '0x6acfc0'
+    gasPrice: '0x01'
+    nonce: '0x04'
+    secretKey: "45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+    to: 'deadbeef00000000000000000000000000000000'
+    value:
+    - '0'

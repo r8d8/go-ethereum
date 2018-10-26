@@ -1,0 +1,102 @@
+# Try to create contract using random bytes
+---
+createFromTransactionReturnRandomBytes:
+  env:
+    currentCoinbase: 2adc25665018aa1fe0e6bc666dac8fc2697ff9ba
+    currentDifficulty: '0x020000'
+    currentGasLimit: '89128960'
+    currentNumber: '1'
+    currentTimestamp: '1000'
+    previousHash: 5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6
+  pre:
+    # tx sender
+    a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+      balance: '100000000000'
+      code: ''
+      nonce: ''
+      storage: {}
+  expect:
+    - indexes:
+        data: !!int -1
+        gas: !!int -1
+        value: !!int -1
+      network:
+        - ALL
+      result:
+        # initialBalance - createGas - dataCost - createData
+        # 100000000000   - 53000     - 22508     - 51200      = 99999873292
+        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+          balance: '99999873292'
+        # newly-created contract
+        6295ee1b4f6dd65047762f924ecd367c17eabf8f:
+          code: '0x49090906966838a5681156a65487c345abe489c2687ccd8f254cdbb528aae732d2a30f2b918be72a409a88306a56525d289c490c2626f34f010525cfe0c445e3d9ff2842bc68c2d8ab2f9a24045930dafef5b1cd0e3a034b9cda1a99a75bb2ab157a945419dd0d3d6eb3ff09c4ac13ab782e22d8b2aa08bf1e8247184fab4e51651f1ab68482066ae759bf3f6a8a5a53ca7869aecff92fefb23206f57caaadcfef6f9e369daa9f62dfa76ac3da5394022778d87a85722a4265f84e1c98aed44a4ff3ccdf2aa0ddc88266bf5a13c9414ceae82b5f7f9e6a8bcbccb4f7715bd979a92e45f88f326e8f6c2bc3cb082f85345de446a02adc287ae830f21aa271e741'
+  transaction:
+    data:
+    - |
+      (module
+        (import "ethereum" "finish" (func $finish (param i32 i32)))
+        (memory 100)
+        (data (i32.const 0)  "\49\09\09\06\96\68\38\a5\68\11\56\a6\54\87\c3\45\ab\e4\89\c2\68\7c\cd\8f\25\4c\db\b5\28\aa\e7\32\d2\a3\0f\2b\91\8b\e7\2a\40\9a\88\30\6a\56\52\5d\28\9c\49\0c\26\26\f3\4f\01\05\25\cf\e0\c4\45\e3\d9\ff\28\42\bc\68\c2\d8\ab\2f\9a\24\04\59\30\da\fe\f5\b1\cd\0e\3a\03\4b\9c\da\1a\99\a7\5b\b2\ab\15\7a\94\54\19\dd\0d\3d\6e\b3\ff\09\c4\ac\13\ab\78\2e\22\d8\b2\aa\08\bf\1e\82\47\18\4f\ab\4e\51\65\1f\1a\b6\84\82\06\6a\e7\59\bf\3f\6a\8a\5a\53\ca\78\69\ae\cf\f9\2f\ef\b2\32\06\f5\7c\aa\ad\cf\ef\6f\9e\36\9d\aa\9f\62\df\a7\6a\c3\da\53\94\02\27\78\d8\7a\85\72\2a\42\65\f8\4e\1c\98\ae\d4\4a\4f\f3\cc\df\2a\a0\dd\c8\82\66\bf\5a\13\c9\41\4c\ea\e8\2b\5f\7f\9e\6a\8b\cb\cc\b4\f7\71\5b\d9\79\a9\2e\45\f8\8f\32\6e\8f\6c\2b\c3\cb\08\2f\85\34\5d\e4\46\a0\2a\dc\28\7a\e8\30\f2\1a\a2\71\e7\41")
+        (export "memory" (memory 0))
+        (export "main" (func $main))
+        (func $main
+          (call $finish
+            (i32.const 0)
+            (i32.const 256))
+        )
+      )
+# bytecode
+# 0x0061736d0100000001090260027f7f0060000002130108657468657265756d0672657475726e0000030201010503010064071102066d656d6f72790200046d61696e00010a0b010900410041800210000b0b8702010041000b800249090906966838a5681156a65487c345abe489c2687ccd8f254cdbb528aae732d2a30f2b918be72a409a88306a56525d289c490c2626f34f010525cfe0c445e3d9ff2842bc68c2d8ab2f9a24045930dafef5b1cd0e3a034b9cda1a99a75bb2ab157a945419dd0d3d6eb3ff09c4ac13ab782e22d8b2aa08bf1e8247184fab4e51651f1ab68482066ae759bf3f6a8a5a53ca7869aecff92fefb23206f57caaadcfef6f9e369daa9f62dfa76ac3da5394022778d87a85722a4265f84e1c98aed44a4ff3ccdf2aa0ddc88266bf5a13c9414ceae82b5f7f9e6a8bcbccb4f7715bd979a92e45f88f326e8f6c2bc3cb082f85345de446a02adc287ae830f21aa271e741
+#
+# bytecode (length=347)
+# zero-bytes:  17  * 4  = 68
+# non-zero:    330 * 68 = 22440
+#                       = 22508
+#
+# 01 02 03 04 05 06 07 08 09 10
+#------------------------------|       | ZB | NZ
+# 00 61 73 6d 01 00 00 00 01 09| 010     4    6
+# 02 60 02 7f 7f 00 60 00 00 02| 020     3    7
+# 13 01 08 65 74 68 65 72 65 75| 030     0    10
+# 6d 06 72 65 74 75 72 6e 00 00| 040     2    8
+# 03 02 01 01 05 03 01 00 64 07| 050     1    9
+# 11 02 06 6d 65 6d 6f 72 79 02| 060     0    10
+# 00 04 6d 61 69 6e 00 01 0a 0b| 070     2    8
+# 01 09 00 41 00 41 80 02 10 00| 080     3    7
+# 0b 0b 87 02 01 00 41 00 0b 80| 090     2    8
+# 02 49 09 09 06 96 68 38 a5 68| 100     0    10
+# 11 56 a6 54 87 c3 45 ab e4 89| 110     0    10
+# c2 68 7c cd 8f 25 4c db b5 28| 120     0    10
+# aa e7 32 d2 a3 0f 2b 91 8b e7| 130     0    10
+# 2a 40 9a 88 30 6a 56 52 5d 28| 140     0    10
+# 9c 49 0c 26 26 f3 4f 01 05 25| 150     0    10
+# cf e0 c4 45 e3 d9 ff 28 42 bc| 160     0    10
+# 68 c2 d8 ab 2f 9a 24 04 59 30| 170     0    10
+# da fe f5 b1 cd 0e 3a 03 4b 9c| 180     0    10
+# da 1a 99 a7 5b b2 ab 15 7a 94| 190     0    10
+# 54 19 dd 0d 3d 6e b3 ff 09 c4| 200     0    10
+# ac 13 ab 78 2e 22 d8 b2 aa 08| 210     0    10
+# bf 1e 82 47 18 4f ab 4e 51 65| 220     0    10
+# 1f 1a b6 84 82 06 6a e7 59 bf| 230     0    10
+# 3f 6a 8a 5a 53 ca 78 69 ae cf| 240     0    10
+# f9 2f ef b2 32 06 f5 7c aa ad| 250     0    10
+# cf ef 6f 9e 36 9d aa 9f 62 df| 260     0    10
+# a7 6a c3 da 53 94 02 27 78 d8| 270     0    10
+# 7a 85 72 2a 42 65 f8 4e 1c 98| 280     0    10
+# ae d4 4a 4f f3 cc df 2a a0 dd| 290     0    10
+# c8 82 66 bf 5a 13 c9 41 4c ea| 300     0    10
+# e8 2b 5f 7f 9e 6a 8b cb cc b4| 310     0    10
+# f7 71 5b d9 79 a9 2e 45 f8 8f| 320     0    10
+# 32 6e 8f 6c 2b c3 cb 08 2f 85| 330     0    10
+# 34 5d e4 46 a0 2a dc 28 7a e8| 340     0    10
+# 30 f2 1a a2 71 e7 41         | 347     0    7
+#-----------------------------------------------
+#                                       17    330
+    gasLimit:
+    - '0x5000001'
+    gasPrice: '0x01'
+    nonce: '0x00'
+    secretKey: 45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8
+    to: ''
+    value:
+    - '0'

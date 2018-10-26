@@ -1,0 +1,63 @@
+{
+    "initMalformedBytecodeNoMain" : {
+        "_info" : {
+            "comment" : "",
+            "filledwith" : "testeth 1.4.0",
+            "lllcversion" : "Version: 0.4.20-develop.2018.1.14+commit.0c20b6da.Darwin.appleclang",
+            "source" : "src/GeneralStateTestsFiller/stEWASMTests/initMalformedBytecodeNoMainFiller.yml",
+            "sourceHash" : "b5e88f6c8d7a65aaa61081b2e34d3d1b87e1f0b8781fefe3e8a6d505d2e39a99"
+        },
+        "env" : {
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x020000",
+            "currentGasLimit" : "0x05500000",
+            "currentNumber" : "0x01",
+            "currentTimestamp" : "0x03e8",
+            "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
+        },
+        "post" : {
+            "Byzantium" : [
+                {
+                    "hash" : "0x88aaafa2fad9b006db7154abe2144acc7f38ccf64a29acaba5b8b8b2f270fe62",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347"
+                }
+            ]
+        },
+        "pre" : {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x174876e800",
+                "code" : "",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0xabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd" : {
+                "balance" : "0x174876e800",
+                "code" : "0x0061736d0100000001110360047f7f7f7f017f60027f7f00600000022b0208657468657265756d06637265617465000008657468657265756d0c73746f7261676553746f72650001030201020503010001071102066d656d6f72790200046d61696e00020a41013f01077f410021004120210141c000210241e000210341800121044180022105413621062003200420052006200110003602002000200110012002200310010b0b8801030041000b2000000000000000000000000000000000000000000000000000000000000000000041c0000b200000000000000000000000000000000000000000000000000000000000000001004180020b360061736d0100000001060160027f7f0002130108657468657265756d0666696e69736800000503010001070a01066d656d6f72790200",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x5000001"
+            ],
+            "gasPrice" : "0x01",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "to" : "0xabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd",
+            "value" : [
+                "0x00"
+            ]
+        }
+    }
+}

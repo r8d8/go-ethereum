@@ -1,0 +1,70 @@
+{
+    "createOOB3" : {
+        "_info" : {
+            "comment" : "",
+            "filledwith" : "testeth 1.4.0",
+            "lllcversion" : "Version: 0.4.20-develop.2017.12.3+commit.4cad0b22.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/stEWASMTests/createOOB3Filler.yml",
+            "sourceHash" : "4ffe0329bb90936803fe45737ba2537fc6afeb0e44b86a092d464bea537bcb6f"
+        },
+        "env" : {
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x020000",
+            "currentGasLimit" : "0x05500000",
+            "currentNumber" : "0x01",
+            "currentTimestamp" : "0x03e8",
+            "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
+        },
+        "post" : {
+            "Byzantium" : [
+                {
+                    "hash" : "0x8f559769705be7ef6ad5a512b384eaa53dba06d332303c4dac4760c3620bc907",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347"
+                }
+            ]
+        },
+        "pre" : {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x174876e800",
+                "code" : "",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0xabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd" : {
+                "balance" : "0x174876e800",
+                "code" : "0x0061736d01000000011c0560057e7f7f7f7f017f60027f7f006000017f60037f7f7f0060000002600408657468657265756d0463616c6c000008657468657265756d0c73746f7261676553746f7265000108657468657265756d1167657452657475726e4461746153697a65000208657468657265756d0e72657475726e44617461436f70790003030201040503010001071102066d656d6f72790200046d61696e00040a48014601077f410021004120210141e0002103418001210441a001210541e0012106200342a08d0620002001200141011000360200200610023602002004200610012005200310010b0b66030041000b14deadbeef00000000000000000000000000000000004180010b2000000000000000000000000000000000000000000000000000000000000000000041a0010b200000000000000000000000000000000000000000000000000000000000000001",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0xdeadbeef00000000000000000000000000000000" : {
+                "balance" : "0x174876e800",
+                "code" : "0x0061736d01000000010c0260047f7f7f7f017f60000002130108657468657265756d066372656174650000030201010503010001071102066d656d6f72790200046d61696e00010a0f010d00410041004100417f10001a0b",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x5000001"
+            ],
+            "gasPrice" : "0x01",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "to" : "0xabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd",
+            "value" : [
+                "0x00"
+            ]
+        }
+    }
+}

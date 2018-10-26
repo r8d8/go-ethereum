@@ -1,0 +1,113 @@
+# Basic EWASM interface test for callDelegate, should run OOG
+---
+callDelegateOOG:
+  env:
+    currentCoinbase: 2adc25665018aa1fe0e6bc666dac8fc2697ff9ba
+    currentDifficulty: '0x020000'
+    currentGasLimit: '89128960'
+    currentNumber: '1'
+    currentTimestamp: '1000'
+    previousHash: 5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6
+  pre:
+    a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+      balance: '100000000000'
+      code: ''
+      nonce: '0'
+      storage: {}
+    b100000000000000000000000000000000000001:
+      balance: '100000000000'
+      code: |
+        (module
+          (import "ethereum" "callDelegate" (func $callDelegate (param i64 i32 i32 i32) (result i32)))
+          (import "ethereum" "storageStore" (func $storageStore (param i32 i32)))
+          (memory 1)
+          (data (i32.const 0) "\c1\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\01")
+          (data (i32.const 20) "\12\34")
+          (export "main" (func $main))
+          (export "memory" (memory 0))
+          (func $main
+            (local $addressOffset i32)
+            (local $dataOffset i32)
+            (local $dataLength i32)
+            (local $resultOffset i32)
+            (local $keyOffset i32)
+            (local $gas i64)
+
+            (set_local $gas (i64.const 20001))         ;; 20002 is the required gas
+            (set_local $addressOffset (i32.const 0))
+            (set_local $dataOffset (i32.const 20))
+            (set_local $dataLength (i32.const 2))
+            (set_local $resultOffset (i32.const 54))
+            (set_local $keyOffset (i32.const 86))
+          
+            (i32.store
+              (get_local $resultOffset)
+              (call $callDelegate
+                (get_local $gas)
+                (get_local $addressOffset)   
+                (get_local $dataOffset)      
+                (get_local $dataLength)))    
+            ;; The result should be 1, because callDelegate runs out of gas
+            (call $storageStore (get_local $keyOffset) (get_local $resultOffset))))
+                
+      nonce: ''
+      storage: {}
+    c100000000000000000000000000000000000001:
+      balance: '100000000000'
+      code: |
+        (module
+          (import "ethereum" "getAddress" (func $getAddress (param i32)))
+          (import "ethereum" "storageStore" (func $storageStore (param i32 i32)))
+          (import "ethereum" "finish"       (func $finish (param i32 i32)))
+          (memory 1)
+          (data (i32.const 64) "\31\32")
+          (export "main" (func $main))
+          (export "memory" (memory 0))
+          (func $main
+            (call $getAddress (i32.const 32))
+            (call $storageStore (i32.const 0) (i32.const 32)) ;; Modify caller Storage
+            (call $finish (i32.const 64) (i32.const 2))       ;; Return data
+            ))
+
+      nonce: ''
+      storage: {}
+  expect:
+    - indexes:
+        data: !!int -1
+        gas: !!int -1
+        value: !!int -1
+      network:
+        - ALL
+      result:
+        # gas sent to contract 2: 20001
+        # initialBalance CALLDELEGATE (Contract 2) SSTORE txCost
+        # 100000000000   - 700      - 20001      - 20000 - 21000 = 99999938299
+        #
+        # gas cost:
+        # getAddress: 2
+        # storageStore: 20000
+        # return: 0
+        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+          balance: '99999938299'     
+          code: ''
+          nonce: '1'
+          storage: {}
+        b100000000000000000000000000000000000001:
+          balance: '100000000000'
+          storage: {
+           0: '0x0100000000000000000000000000000000000000000000000000000000000000'  # Runs Out Of Gas, VM result should be 1
+          }
+        c100000000000000000000000000000000000001:
+          balance: '100000000000'
+          storage: {}
+  transaction:
+    data:
+    - ''
+    gasLimit:
+    - '0x500000' 
+    gasPrice: '0x01'
+    nonce: '0x00'
+    secretKey: '45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8'
+    to: 'b100000000000000000000000000000000000001'
+    value:
+    - '0'

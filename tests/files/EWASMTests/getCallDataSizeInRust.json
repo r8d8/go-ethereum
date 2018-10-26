@@ -1,0 +1,56 @@
+{
+    "getCallDataSizeInRust" : {
+        "_info" : {
+            "comment" : "",
+            "filledwith" : "testeth 1.4.0",
+            "lllcversion" : "Version: 0.4.20-develop.2017.12.3+commit.4cad0b22.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/stEWASMTests/getCallDataSizeInRustFiller.yml",
+            "sourceHash" : "bd2b4f0ec4994861fcedfcf151a60383c22412ae55c405e7fdefc905dbd57fb7"
+        },
+        "env" : {
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x020000",
+            "currentGasLimit" : "0x05500000",
+            "currentNumber" : "0x01",
+            "currentTimestamp" : "0x03e8",
+            "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
+        },
+        "post" : {
+            "Byzantium" : [
+                {
+                    "hash" : "0xf9e8341aad1139d60b31e2c87aa251823d778e84a049ed2844bb91c6d222f07c",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347"
+                }
+            ]
+        },
+        "pre" : {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x174876e800",
+                "code" : "0x0061736d010000000116056000017f60027f7f006000006000017f60027f7f0002340208657468657265756d0f67657443616c6c4461746153697a65000308657468657265756d0c73746f7261676553746f72650004030201020404017000000503010011071102046d61696e0002066d656d6f727902000901000a57015501017f4100410028020441306b22003602042000100036020c200041286a4200370200200041206a4200370200200041186a420037020020004200370210200041106a2000410c6a10014100200041306a3602040b0b0a010041040b0410001000",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0xffffffffffffffffffffffffffffffff"
+            ],
+            "gasLimit" : [
+                "0x5000001"
+            ],
+            "gasPrice" : "0x01",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "to" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "value" : [
+                "0x00"
+            ]
+        }
+    }
+}

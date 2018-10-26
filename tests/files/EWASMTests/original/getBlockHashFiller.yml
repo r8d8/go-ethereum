@@ -1,0 +1,86 @@
+# Basic EWASM interface test for getBlockHash
+---
+getBlockHash:
+  env:
+    currentCoinbase: 2adc25665018aa1fe0e6bc666dac8fc2697ff9ba
+    currentDifficulty: '0x020000'
+    currentGasLimit: '89128960'
+    currentNumber: '1'
+    currentTimestamp: '1000'
+    previousHash: 5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6
+  pre:
+    a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+      balance: '100000000000'
+      code: ''
+      nonce: '0'
+      storage: {}
+    b94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+      balance: '100000000000'
+      code: |
+        (module
+          (import "ethereum" "storageStore" (func $storageStore (param i32 i32)))
+          (import "ethereum" "getBlockHash" (func $getBlockHash (param i64 i32) (result i32)))
+          (memory 1)
+          ;; storage keys
+          (data (i32.const 0)  "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00") ;; 0
+          (data (i32.const 32) "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\01") ;; 1
+          (export "main" (func $main))
+          (export "memory" (memory 0))
+          (func $main
+            (local $key0 i32)
+            (local $key1 i32)
+            (local $blockNumber i64)
+            (local $blockHashExitCode i32)
+            (local $blockHashResult i32)
+          
+            ;; init pointers
+            (set_local $key0 (i32.const 0))               ;; position 0 in memory
+            (set_local $key1 (i32.const 32))              ;; pisition 32 in memory
+            (set_local $blockHashExitCode (i32.const 64)) ;; position in memory for blockHash exit code 0=success 1=failure
+            (set_local $blockHashResult   (i32.const 96)) ;; position for the blockhash result
+            
+            (set_local $blockNumber (i64.const 0))        ;; block 0
+
+            (i32.store (get_local $blockHashExitCode)
+              (call $getBlockHash (get_local $blockNumber) (get_local $blockHashResult)))
+              
+            (call $storageStore (get_local $key0) (get_local $blockHashResult))
+            (call $storageStore (get_local $key1) (get_local $blockHashExitCode))
+            ))
+      nonce: ''
+      storage: {}
+  expect:
+    - indexes:
+        data: !!int -1
+        gas: !!int -1
+        value: !!int -1
+      network:
+        - ALL
+      result:
+        # getBlockHash:    800
+        # storageStore:  20000 (non-zero)
+        # storageStore:   5000 (zero)
+        # Tx Cost:       21000
+        #---------------------------
+        # Total:         46800
+        #---------------------------
+        # Final Balance: 99999953200
+        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+          balance: '99999953200'
+        b94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+          storage: {
+            0: '0x044852b2a670ade5407e78fb2863c51de9fcb96542a07186fe3aeda6bb8a116d',
+            1: '0x0000000000000000000000000000000000000000000000000000000000000000' # success
+          }
+  transaction:
+    data:
+    - ''
+    gasLimit:
+    - '0x5000001'
+    gasPrice: '0x01'
+    nonce: '0x00'
+    secretKey: 45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8
+    to: 'b94f5374fce5edbc8e2a8697c15331677e6ebf0b'
+    value:
+    - '0'
+  

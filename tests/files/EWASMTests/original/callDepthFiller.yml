@@ -1,0 +1,80 @@
+# 2 contracts call each other until OOG, $call is called 1072 times
+callDepth:
+  env:
+    currentCoinbase: 2adc25665018aa1fe0e6bc666dac8fc2697ff9ba
+    currentDifficulty: '0x020000'
+    currentGasLimit: '256901120'
+    currentNumber: '1'
+    currentTimestamp: '1000'
+    previousHash: 5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6
+  pre:
+    # tx sender
+    a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+      balance: '100000000000'
+      code: ''
+      nonce: ''
+      storage: {}
+    deadbeef00000000000000000000000000000001:
+      balance: '100000000000'
+      code: |
+        (module
+          (import "ethereum" "call" (func $call (param i64 i32 i32 i32 i32) (result i32)))
+          ;; add debug here
+          (memory 1)
+          (data (i32.const 0) "\de\ad\be\ef\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02")
+          (export "memory" (memory 0))
+          (export "main" (func $main))
+          (func $main
+            (drop
+              (call $call
+                (i64.const 200000000)
+                (i32.const 0)       ;; address offset
+                (i32.const 32)      ;; value offset
+                (i32.const 64)      ;; data offset
+                (i32.const 32)))))  ;; data length
+      nonce: ''
+      storage: {}
+    deadbeef00000000000000000000000000000002:
+      balance: '100000000000'
+      code: |
+        (module
+          (import "ethereum" "call" (func $call (param i64 i32 i32 i32 i32) (result i32)))
+          (memory 1)
+          (data (i32.const 0) "\de\ad\be\ef\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\01")
+          (export "memory" (memory 0))
+          (export "main" (func $main))
+          (func $main
+            (drop
+              (call $call
+                (i64.const 200000000)
+                (i32.const 0)      ;; address offset
+                (i32.const 32)     ;; value offset
+                (i32.const 64)     ;; data offset
+                (i32.const 32))))) ;; data length
+      nonce: ''
+      storage: {}
+  expect:
+    - indexes:
+        data: !!int -1
+        gas: !!int -1
+        value: !!int -1
+      network:
+        - ALL
+      result:
+        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+          balance: '99999604016'
+        deadbeef00000000000000000000000000000001:
+          storage: {}
+        deadbeef00000000000000000000000000000002:
+          storage: {}          
+  transaction:
+    data: 
+    - ''
+    gasLimit:
+    - '0xf500000'
+    gasPrice: '0x01'
+    nonce: '0x00'
+    secretKey: 45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8
+    to: 'deadbeef00000000000000000000000000000001'
+    value:
+    - '0'

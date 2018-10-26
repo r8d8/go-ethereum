@@ -1,0 +1,63 @@
+{
+    "getTxGasPrice" : {
+        "_info" : {
+            "comment" : "",
+            "filledwith" : "testeth 1.4.0",
+            "lllcversion" : "Version: 0.4.20-develop.2017.12.3+commit.4cad0b22.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/stEWASMTests/getTxGasPriceFiller.yml",
+            "sourceHash" : "1f9f3c41d69299d931d77b5e54dd4ea8e34d3668546c623c6e6421ecdf87b8df"
+        },
+        "env" : {
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x020000",
+            "currentGasLimit" : "0x05500000",
+            "currentNumber" : "0x01",
+            "currentTimestamp" : "0x03e8",
+            "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
+        },
+        "post" : {
+            "Byzantium" : [
+                {
+                    "hash" : "0xb1fe3a7e7f1765adbe5e64f3d8fcad1ab53cd56cfb72b7f94fd69e517d7c146b",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347"
+                }
+            ]
+        },
+        "pre" : {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x174876e800",
+                "code" : "",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0xdeadbeef00000000000000000000000000000000" : {
+                "balance" : "0x174876e800",
+                "code" : "0x0061736d01000000010d0360017f0060027f7f0060000002320208657468657265756d0d67657454784761735072696365000008657468657265756d0c73746f7261676553746f72650001030201020503010001071102066d656d6f72790200046d61696e00020a0f010d004100100041e400410010010b",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0xffff"
+            ],
+            "gasLimit" : [
+                "0x5000001"
+            ],
+            "gasPrice" : "0x02",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "to" : "0xdeadbeef00000000000000000000000000000000",
+            "value" : [
+                "0x00"
+            ]
+        }
+    }
+}

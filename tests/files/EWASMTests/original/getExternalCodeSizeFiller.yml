@@ -1,0 +1,71 @@
+getExternalCodeSize:
+  env:
+    currentCoinbase: 2adc25665018aa1fe0e6bc666dac8fc2697ff9ba
+    currentDifficulty: '0x020000'
+    currentGasLimit: '89128960'
+    currentNumber: '1'
+    currentTimestamp: '1000'
+    previousHash: 5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6
+  pre:
+    # tx sender
+    a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+      balance: '100000000000'
+      code: ''
+      nonce: ''
+      storage: {}
+    # called contract
+    deadbeef00000000000000000000000000000000:
+      balance: '100000000000'
+      # wasm bytecode corresponding to the simplest possible wasm code segment: `(module)`, length: 8 bytes
+      code: '0x0061736d01000000' 
+      nonce: ''
+      storage: {}
+    # main contract, tx receiver
+    abcdabcdabcdabcdabcdabcdabcdabcdabcdabcd:
+      balance: '100000000000'
+      code: |
+        (module
+          (import "ethereum" "getExternalCodeSize" (func $getExternalCodeSize (param i32) (result i32)))
+          (import "ethereum" "storageStore" (func $storageStore (param i32 i32)))
+          (memory 1)
+          (data (i32.const 64)  "\de\ad\be\ef\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+
+          (export "memory" (memory 0))
+          (export "main" (func $main))
+
+          (func $main
+            ;; read length of 'deadbeef' account code, store in memory at pos 32
+            (i32.store (i32.const 32) (call $getExternalCodeSize (i32.const 64)))
+            (call $storageStore (i32.const 0) (i32.const 32))
+          )
+        )
+      nonce: ''
+      storage: {}
+  expect:
+    - indexes:
+        data: !!int -1
+        gas: !!int -1
+        value: !!int -1
+      network:
+        - ALL
+      result:
+        # InitialBalance - EXTCODESIZE - SSTORE - TXCOST  = FinalBalance
+        # 100000000000   - 700         - 20000  - 21000   = 99999958300
+        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+          balance: '99999958300'
+        abcdabcdabcdabcdabcdabcdabcdabcdabcdabcd:
+          storage: {
+            # length of the code for the 'deadbeef' account
+            0: '0x0800000000000000000000000000000000000000000000000000000000000000'
+          }
+  transaction:
+    data: 
+    - ''
+    gasLimit:
+    - '0x5000001'
+    gasPrice: '0x01'
+    nonce: '0x00'
+    secretKey: 45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8
+    to: 'abcdabcdabcdabcdabcdabcdabcdabcdabcdabcd'
+    value:
+    - '0'

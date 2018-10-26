@@ -1,0 +1,107 @@
+# Transaction to an account which calls another account with staticcall, which then in turns calls a third account with call value.
+---
+callValueInStaticMode:
+  env:
+    currentCoinbase: 2adc25665018aa1fe0e6bc666dac8fc2697ff9ba
+    currentDifficulty: '0x020000'
+    currentGasLimit: '89128960'
+    currentNumber: '1'
+    currentTimestamp: '1000'
+    previousHash: 5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6
+  pre:
+    # tx sender
+    a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+      balance: '100000000000'
+      code: ''
+      nonce: ''
+      storage: {}
+    # calls next account with staticcall
+    deadbeef00000000000000000000000000000000:
+      balance: '100000000000'
+      code: |
+        (module
+          (import "ethereum" "callStatic" (func $callStatic (param i64 i32 i32 i32) (result i32)))
+          (memory 1)
+          ;; 0-20 - Address
+          ;;
+          (data (i32.const 0) "\de\ad\be\ef\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\01")
+          (export "main" (func $main))
+          (export "memory" (memory 0))
+          (func $main
+            (i32.store
+              (i32.const 20)
+              (call $callStatic
+                (i64.const 200000) ;; gas
+                (i32.const 0)      ;; address offset
+                (i32.const 52)     ;; data offset
+                (i32.const 0)))))  ;; data length
+      nonce: ''
+      storage: {}
+    # calls next account with call value
+    deadbeef00000000000000000000000000000001:
+      balance: '100000000000'
+      code: |
+        (module
+          (import "ethereum" "call" (func $call (param i64 i32 i32 i32 i32) (result i32)))
+          (memory 1)
+          (data (i32.const 0) "\de\ad\be\ef\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02")
+
+          (export "memory" (memory 0))
+          (export "main" (func $main))
+
+          (func $main
+            ;; locals
+            (local $ptrResult i32)
+            (local $ptrValue i32)
+            (local $ptrData i32)
+
+            ;; init pointers
+            (set_local $ptrValue (i32.const 32))
+            (set_local $ptrData (i32.const 64))
+
+            (i32.store (get_local $ptrValue) (i32.const 10)) ;; value 10
+            
+            (i32.store
+              (get_local $ptrResult)
+              (call $call
+                (i64.const 200000)    ;; gas limit
+                (i32.const 0)         ;; address offset
+                (get_local $ptrValue) ;; value offset
+                (get_local $ptrData)  ;; data offset
+                (i32.const 0)))))      ;; data length
+                
+      nonce: ''
+      storage: {}
+    deadbeef00000000000000000000000000000002:
+      balance: '100000000000'
+      code: ''
+      nonce: ''
+      storage: {}
+  expect:
+    - indexes:
+        data: !!int -1
+        gas: !!int -1
+        value: !!int -1
+      network:
+        - ALL
+      result:
+        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+          balance: '99999778300'
+        deadbeef00000000000000000000000000000000:
+          balance: '100000000000'
+        deadbeef00000000000000000000000000000001:
+          balance: '100000000000'
+        deadbeef00000000000000000000000000000002:
+          balance: '100000000000'
+  transaction:
+    data: 
+    - ''
+    gasLimit:
+    - '0x5000001'
+    gasPrice: '0x01'
+    nonce: '0x00'
+    secretKey: 45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8
+    to: 'deadbeef00000000000000000000000000000000'
+    value:
+    - '0'
+      

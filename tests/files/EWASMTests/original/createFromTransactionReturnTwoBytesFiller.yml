@@ -1,0 +1,79 @@
+# creates a 2 byte EVM contract - 0x6001 - PUSH1 0x01
+---
+createFromTransactionReturnTwoBytes:
+  env:
+    currentCoinbase: 2adc25665018aa1fe0e6bc666dac8fc2697ff9ba
+    currentDifficulty: '0x020000'
+    currentGasLimit: '89128960'
+    currentNumber: '1'
+    currentTimestamp: '1000'
+    previousHash: 5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6
+  pre:
+    # tx sender
+    a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+      balance: '100000000000'
+      code: ''
+      nonce: ''
+      storage: {}
+  expect:
+    - indexes:
+        data: !!int -1
+        gas: !!int -1
+        value: !!int -1
+      network:
+        - ALL
+      result:
+        # initialBalance - createGas - dataCost - createData
+        # 100000000000   - 53000     - 5032     - 400      = 99999941568
+        # createData: new_contract_bytes * create_data_cost
+        #                    8           * 200              = 1600
+        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+          balance: '99999941568'
+        # newly-created contract
+        6295ee1b4f6dd65047762f924ecd367c17eabf8f:
+          code: '0x6001'
+  transaction:
+    data:
+    - |
+      (module
+        (import "ethereum" "finish" (func $finish (param i32 i32)))
+        (memory 100)
+        (data (i32.const 0)  "\60\01") ;; return 2 bytes
+        (export "memory" (memory 0))
+        (export "main" (func $main))
+        (func $main
+          (call $finish
+            (i32.const 0)
+            (i32.const 2))
+        )
+      )
+# bytecode
+# 0x0061736d0100000001090260027f7f0060000002130108657468657265756d0672657475726e0000030201010503010064071102066d656d6f72790200046d61696e00010a0a0108004100410210000b0b08010041000b026001
+# length = 90
+# zero-bytes: 17 * 4  = 68
+# non-zero:   73 * 68 = 4964
+#                     = 5032
+#
+# 01 02 03 04 05 06 07 08 09 10
+#-------------------------------|     | ZB | NZ
+# 00 61 73 6d 01 00 00 00 01 09 | 10     4   6
+# 02 60 02 7f 7f 00 60 00 00 02 | 20     3   7
+# 13 01 08 65 74 68 65 72 65 75 | 30     0   10
+# 6d 06 72 65 74 75 72 6e 00 00 | 40     2   8
+# 03 02 01 01 05 03 01 00 64 07 | 50     1   9
+# 11 02 06 6d 65 6d 6f 72 79 02 | 60     0   10
+# 00 04 6d 61 69 6e 00 01 0a 0a | 70     2   8
+# 01 08 00 41 00 41 02 10 00 0b | 80     3   7
+# 0b 08 01 00 41 00 0b 02 60 01 | 90     2   8
+#----------------------------------------------
+#                                       17   73
+
+    gasLimit:
+    - '0x5000001'
+    gasPrice: '0x01'
+    nonce: '0x00'
+    secretKey: 45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8
+    to: ''
+    value:
+    - '0'
+      
