@@ -13,16 +13,20 @@ import (
 	"github.com/ethereumproject/go-ethereum/core/vm"
 )
 
-type WASM struct {}
+type WASM struct {
+	env Environment
+}
 
 // New returns a new instance of the WASM.
-func New() *WASM {
-	return &WASM{}
+func New(env Environment) *WASM {
+	return &WASM{
+		env: env
+	}
 }
 
 // Run loops and evaluates the contract's code with the given input data
-func (evm *WASM) Run(contract *vm.Contract, input []byte) (ret []byte, err error) {
-	evm.env.SetDepth(evm.env.Depth() + 1)
+func (wasmvm *WASM) Run(contract *vm.Contract, input []byte) (ret []byte, err error) {
+	wasmvm.env.SetDepth(evm.env.Depth() + 1)
 	defer evm.env.SetDepth(evm.env.Depth() - 1)
 
 	if contract.CodeAddr != nil {
