@@ -35,7 +35,19 @@ var (
 
 // VirtualMachine is an EVM interface
 type VirtualMachine interface {
+	// Run loops and evaluates the contract's code with the given input data and returns
+	// the return byte-slice and an error if one occurred.
 	Run(*Contract, []byte) ([]byte, error)
+
+	// Hook to be called on the init code of a contract to be created.
+	// This let the interpreter pre-process the init-code before it is
+	// executed.
+	PreContractCreation([]byte, *Contract) ([]byte, error)
+
+	// Hook to be called once a newly created contract's init code
+	// has been called and is going to be stored. This let the
+	// interpreter post-process the bytecode before it is persisted.
+	PostContractCreation([]byte) ([]byte, error)
 }
 
 // EVM is used to run Ethereum based contracts and will utilise the
@@ -178,6 +190,19 @@ func (evm *EVM) Run(contract *Contract, input []byte) (ret []byte, err error) {
 		pc++
 
 	}
+}
+
+// PreContractCreation doesn't need to do anything in the case
+// of EVM1 bytecode.
+func (in *EVM) PreContractCreation(code []byte, contract *Contract) ([]byte, error) {
+	return code, nil
+}
+
+// PostContractCreation doesn't need to do anything in the case
+// of EVM1 bytecode, but it could turn out useful when extending
+// the tracer.
+func (in *EVM) PostContractCreation(code []byte) ([]byte, error) {
+	return code, nil
 }
 
 // calculateGasAndSize calculates the required given the opcode and stack items calculates the new memorysize for
