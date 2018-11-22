@@ -33,23 +33,6 @@ var (
 	CodeStoreOutOfGasError = errors.New("Contract creation code storage out of gas")
 )
 
-// VirtualMachine is an EVM interface
-type VirtualMachine interface {
-	// Run loops and evaluates the contract's code with the given input data and returns
-	// the return byte-slice and an error if one occurred.
-	Run(*Contract, []byte) ([]byte, error)
-
-	// Hook to be called on the init code of a contract to be created.
-	// This let the interpreter pre-process the init-code before it is
-	// executed.
-	PreContractCreation([]byte, *Contract) ([]byte, error)
-
-	// Hook to be called once a newly created contract's init code
-	// has been called and is going to be stored. This let the
-	// interpreter post-process the bytecode before it is persisted.
-	PostContractCreation([]byte) ([]byte, error)
-}
-
 // EVM is used to run Ethereum based contracts and will utilise the
 // passed environment to query external sources for state information.
 // The EVM will run the byte code VM or JIT VM based on the passed

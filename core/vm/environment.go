@@ -78,12 +78,21 @@ type Environment interface {
 	Create(me ContractRef, data []byte, gas, price, value *big.Int) ([]byte, common.Address, error)
 }
 
-// Vm is the basic interface for an implementation of the EVM.
-type Vm interface {
-	// Run should execute the given contract with the input given in in
-	// and return the contract execution return bytes or an error if it
-	// failed.
-	Run(c *Contract, in []byte) ([]byte, error)
+// VirtualMachine is an interface over EVM and WebAssembly virual machines
+type VirtualMachine interface {
+	// Run loops and evaluates the contract's code with the given input data and returns
+	// the return byte-slice and an error if one occurred.
+	Run(*Contract, []byte) ([]byte, error)
+
+	// Hook to be called on the init code of a contract to be created.
+	// This let the interpreter pre-process the init-code before it is
+	// executed.
+	PreContractCreation([]byte, *Contract) ([]byte, error)
+
+	// Hook to be called once a newly created contract's init code
+	// has been called and is going to be stored. This let the
+	// interpreter post-process the bytecode before it is persisted.
+	PostContractCreation([]byte) ([]byte, error)
 }
 
 // Database is a EVM database for full state querying.

@@ -62,7 +62,7 @@ func NewEnv(cfg *Config, state *state.StateDB) vm.Environment {
 }
 
 func (self *Env) RuleSet() vm.RuleSet      { return self.ruleSet }
-func (self *Env) Vm() vm.Vm                { return self.evm }
+func (self *Env) Vm() vm.VirtualMachine    { return self.evm }
 func (self *Env) Origin() common.Address   { return self.origin }
 func (self *Env) BlockNumber() *big.Int    { return self.number }
 func (self *Env) Coinbase() common.Address { return self.coinbase }
