@@ -75,7 +75,7 @@ func NewEWASMInterpreter(evm *EVM, cfg Config) Interpreter {
 
 	inter := &InterpreterEWASM{
 		StateDB:  evm.StateDB,
-		evm:      evm,
+		evm:	      evm,
 		gasTable: evm.chainConfig.GasTable(evm.BlockNumber),
 		metering: metering,
 	}
